@@ -1,0 +1,29 @@
+.news-header {
+    font-family: BBaran;
+    font-size: 24px;
+    direction: rtl;
+    padding-bottom: 20px;
+    padding-top: 40px;
+}
+
+.persian-text {
+    font-family: BLotus;
+    direction: rtl;
+}
+
+.persian-text-bold {
+    font-family: BLotus;
+    font-weight: bold;
+    direction: rtl;
+}
+
+.persian-text-big-bold {
+    font-size: 26px;
+    font-family: BLotus;
+    font-weight: bold;
+    direction: rtl;
+}
+
+.btn-persian {
+    font-family: BLotus;
+}
