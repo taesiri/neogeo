@@ -13,23 +13,7 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
-compile '/css/*' do
-  # don’t filter or layout
-end
-
-compile '/js/*' do
-  # don’t filter or layout
-end
-
-compile '/fonts/*' do
-  # don’t filter or layout
-end
-
-compile '/ico/*' do
-  # don’t filter or layout
-end
-
-compile '/img/*' do
+compile '/assets/*' do
   # don’t filter or layout
 end
 
@@ -70,25 +54,18 @@ compile '*' do
   end
 end
 
-route '/css/*' do
-  item.identifier.chop + '.' + item[:extension]
-end
 
-route '/js/*' do
-  item.identifier.chop + '.' + item[:extension]
-end
-
-route '/fonts/*' do
+route '/assets/fonts/*' do
+  # /fonts/foo-eot/ -> /fonts/foo.eot
   item.identifier.sub(/-.+\/$/, '') + '.' + item[:extension]
 end
 
-route '/ico/*' do
+route '/assets/*' do
   item.identifier.chop + '.' + item[:extension]
 end
 
-route '/img/*' do
-  item.identifier.chop + '.' + item[:extension]
-end
+
+
 
 route '*' do
   if item.binary?
