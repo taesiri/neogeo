@@ -33,6 +33,34 @@ compile '/img/*' do
   # don’t filter or layout
 end
 
+compile '/' do
+  if item.binary?
+    # don’t filter binary items
+  else
+    filter :erb
+    layout 'homepage'
+  end
+end
+
+
+compile '/en/*' do
+  if item.binary?
+    # don’t filter binary items
+  else
+    filter :erb
+    layout 'default-en'
+  end
+end
+
+compile '/fa/*' do
+  if item.binary?
+    # don’t filter binary items
+  else
+    filter :erb
+    layout 'default-fa'
+  end
+end
+
 compile '*' do
   if item.binary?
     # don’t filter binary items
