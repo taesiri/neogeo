@@ -1,5 +1,152 @@
 ---
-title: A New Item
+title: Archimedean Spiral
+
+requirementsScripts :
+    - mathjax
+    - prettify
+
+kind : article
+
+article_name : Archimedean Spiral
+article_parent : Curves
+article_parent_path : /en/resources/curves/
+article_description: description
+article_logo_path : /curves/archimedes_spiral/small.gif
+article_resource_path : /assets/resourcemanager/curves/archimedes_spiral/
 ---
 
-Hi, I'm a new item!
+<div class="row">
+    <div class="span10">
+        <div class="span5">
+            <p>The <strong>Archimedean spiral</strong> (also known as the <strong>arithmetic spiral</strong> or <strong>spiral
+                of Archimedes</strong>) is a spiral named after the 3rd century BC Greek mathematician Archimedes. It is
+                the locus of points corresponding to the locations over time of a point moving away from a fixed point
+                with a constant speed along a line which rotates with constant angular velocity. Equivalently, in polar
+                coordinates $(r, \theta)$ it can be described by the equation</p>
+
+            <p></p><br/>
+
+            <p></p>
+        </div>
+        <div class="span4">
+            <p class="text-center"><img src="<%=item[:article_resource_path]%>archimedean.png" class="img-rounded"></p>
+
+            <p class="text-center"><span class="label label-info">Three 360° turnings of one arm of an Archimedean spiral</span>
+            </p>
+
+            <p></p>
+        </div>
+        <div class="span9">
+            <!-- Equations-->
+            <blockquote class="article-headlines">
+                <p class="lead ">
+                    <strong> Equations </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <p></p><br/>
+
+            <p>
+                \begin{align}
+                \ r = a + b\theta
+                \end{align}
+            </p>
+            <!-- Equations-->
+            <!-- General Archimedean spiral-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead ">
+                    <strong> General Archimedean spiral </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <p>Sometimes the term Archimedean spiral is used for the more general group of spirals</p>
+
+            <p>
+                \begin{align}
+                \ r = a + b\theta^\frac{1}{x} \\
+                \end{align}
+            </p>
+
+            <p>
+                The normal Archimedean spiral occurs when x = 1. Other spirals falling into this group include the
+                hyperbolic spiral, Fermat's spiral, and the lituus. Virtually all static spirals appearing in nature are
+                logarithmic spirals, not Archimedean ones. Many dynamic spirals (such as the Parker spiral of the solar
+                wind, or the pattern made by a Catherine's wheel) are Archimedean.
+            </p>
+            <!-- General Archimedean spiral-->
+            <!-- Maple-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> Maple Sample Code </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <p class="text-center">
+                <img class="text-cente" src="<%=item[:article_resource_path]%>mapleArchimedeanSpiral.png">
+            </p>
+            <br/>
+                <pre class="prettyprint linenums">restart;
+with(plots):           # we will use drawing cabability
+with(LinearAlgebra):   # we will use linear algebra capability
+S := t -> Matrix(2,2,[
+              [cos(t),-sin(t)],
+              [sin(t),cos(t)]
+         ]): # defn
+S(a);         # test it
+
+ip:=Vector([1,0]):    # initial pt on circle
+tng:=Vector([0,1]):   # initial tangent to circle
+c  := (t)->  S(t).ip: # paramtrize simple circle
+as := (s) -> S(s).ip + s*S(s).(-tng):  # parametrize Arc Sprl
+
+C  := plot(
+         [c(t)[1], c(t)[2], t=0..2*Pi],
+         thickness= 3,
+         color   = black
+     ):     # digital data to draw circle
+
+AS := plot(
+          [as(t)[1] , as(t)[2] , t=0..6*Pi],
+          thickness=3,
+          color    =green
+     ):    #  digital data to draw AS
+
+'c(t)'  = c(t);   # see details circle parameterization
+'as(t)' = as(t);  # see details AS parameterization
+display(C,AS);    # render two drawings
+  </pre>
+            <p>
+                <a href="<%=item[:article_resource_path]%>Archimedean.mw"> Download Maple Code </a>
+            </p>
+            <!-- Maple-->
+            <!-- To Developers-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead muted">
+                    <strong> To Developers </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <pre class="prettyprint linenums"> //Source code is not available</pre>
+            <!-- To Developers-->
+            <!-- Refrences-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> References </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <ol>
+                <li><a href="http://en.wikipedia.org/wiki/Archimedean_spiral"> Wikipedia, Archimedean spiral </a></li>
+                <li><a href="http://paulbourke.net/geometry/archimedesspiral/"> Paulbourke, Archimedes spiral </a></li>
+                <li><a href="http://mathsci.ucd.ie/modules/mst30070/maple/L17/arcim_sprl.html"> UNIVERSITY COLLEGE
+                    DUBLIN (UCD), Archimedean Spiral </a></li>
+            </ol>
+            <!-- Refrences-->
+            <br/>
+        </div>
+    </div>
+</div>

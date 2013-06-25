@@ -1,5 +1,124 @@
 ---
-title: A New Item
----
+title: Lituus Spiral
 
-Hi, I'm a new item!
+requirementsScripts :
+    - mathjax
+    - prettify
+    - jxgraph
+
+kind : article
+
+article_name : Lituus Spiral
+article_parent : Curves
+article_parent_path : /en/resources/curves/
+article_description: description
+article_logo_path : /curves/lituus_spiral/small.gif
+article_resource_path : /assets/resourcemanager/curves/lituus_spiral/
+---
+<div class="row">
+    <div class="span10">
+        <div class="span5">
+            <p>In mathematics, a <strong>lituus</strong> is a spiral in which the angle is inversely proportional to the square of the radius (as expressed in polar coordinates).</p>
+            <p></p><br />
+            <p></p>
+        </div>
+        <div class="span4">
+            <p class="text-center"> <img src="<%=item[:article_resource_path]%>lituus.png" class="img-rounded"> </p>
+            <p class="text-center"> <span class="label label-info" >Branch for positive $r$</span> </p>
+            <p></p>
+        </div>
+        <div class="span9">
+            <!-- Equations-->
+            <blockquote class="article-headlines">
+                <p class="lead ">
+                    <strong> Equations </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <p>
+                \begin{align}
+                \ r^2 \theta = k \\
+                \end{align}
+            </p>
+            <p>
+                This spiral, which has two branches depending on the sign of $r$ , is asymptotic to the $x$ axis. Its points of inflexion are at
+            </p>
+            <p>
+                \begin{align}
+                \ \bigg( \theta , r \bigg) = \bigg( \frac{1}{2}, \sqrt{2k} \bigg)  and  \bigg( \frac{1}{2}, - \sqrt{2k} \bigg) \\
+                \end{align}
+            </p>
+            <!-- Equations-->
+            <!-- Maple-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> Maple Sample Code </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <p class="text-center">
+                <img class="text-cente" src="<%=item[:article_resource_path]%>lituus_maple.png">
+            </p>
+            <br />
+                <pre class="prettyprint linenums">with(plots):
+Pp := polarplot(1/sqrt(t), t = 1 .. 16);
+Np := polarplot(-1/sqrt(t), t = 1 .. 16);
+display({Np, Pp});
+</pre>
+            <p>
+                <a href="Lituus_spiral.mw"> Download Maple Code </a>
+            </p>
+            <!-- Maple-->
+
+            <!-- To Online JavaScript Graph-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> Live Graph </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <div id="box" class="jxgbox" style="width:500px; height:500px;"></div>
+            <script type="text/javascript">
+                var b1 = JXG.JSXGraph.initBoard('box', {boundingbox: [-10, 10, 10, -10],axis:true});
+                var k = b1.create('slider', [[1,8],[5,8],[0,1,4]]);
+                var c = b1.create('curve', [function(phi){return Math.sqrt(k.Value()/phi); }, [0, 0],0, 8*Math.PI],{curveType:'polar', strokewidth:1});
+            </script>
+            <p></p>
+            <p>JavaScript code</p>
+            <pre class="prettyprint linenums">// jsxgraph.js Required
+var b1 = JXG.JSXGraph.initBoard('box', {boundingbox: [-10, 10, 10, -10],axis:true});
+var k = b1.create('slider', [[1,8],[5,8],[0,1,4]]);
+var c = b1.create('curve', [function(phi){return Math.sqrt(k.Value()/phi); }, [0, 0],0, 8*Math.PI],{curveType:'polar', strokewidth:1});</pre>
+            <!-- To Online JavaScript Graph-->
+
+            <!-- To Developers-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead muted">
+                    <strong> To Developers </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <pre class="prettyprint linenums"> //Source code is not available</pre>
+            <!-- To Developers-->
+            <!-- Refrences-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> References </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <ol>
+                <li> <a href="http://en.wikipedia.org/wiki/Lituus_(mathematics)"> Wikipedia, Lituus (mathematics) </a> </li>
+                <li> <a href="http://paulbourke.net/geometry/archimedesspiral/"> Paulbourke, Lituus spiral </a> </li>
+                <li> <a href="mailto:milad261@gmail.com"> Maple Code Author : Milad Ghanimat</a> </li>
+                <li> <a href="http://jsxgraph.uni-bayreuth.de/wiki/index.php/Lituus"> JSXGraph, Lituus  </a> </li>
+            </ol>
+            <!-- Refrences-->
+            <br />
+        </div>
+    </div>
+</div>

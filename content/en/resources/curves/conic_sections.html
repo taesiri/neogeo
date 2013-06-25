@@ -1,5 +1,117 @@
 ---
-title: A New Item
----
+title: Conic Section
 
-Hi, I'm a new item!
+requirementsScripts :
+    - mathjax
+    - prettify
+
+kind : article
+
+article_name : Conic Section
+article_parent : Curves
+article_parent_path : /en/resources/curves/
+article_description: description
+article_logo_path : /curves/conic_sections/small.gif
+article_resource_path : /assets/resourcemanager/curves/conic_sections/
+---
+<div class="row">
+    <div class="span10">
+        <div class="span5">
+            <p>
+                If a cylinder is sliced by a plane a number of curves arise depending on the angle of the plane with respect to the cylinder axis, these are called conic sections. Conic sections were studied extensively by the Greeks as early as 350 BC in an attempt to solve the great geometric problems of the day, namely, squaring the circle, duplicating the cube, and trisecting an angle. They were also studied extensively in relation to Keplers laws of planetary motion by Descarte and Fermat. There are four different classes of curve (circle, ellipse, parabola, and hyperbola) and they are illustrated below.
+            </p><p></p><br />
+            <p></p>
+        </div>
+        <div class="span4">
+            <p class="text-center"> <img src="<%=item[:article_resource_path]%>drawing1.gif" class="img-rounded"> </p>
+            <p class="text-center"> <span class="label label-info" >Conic Sections</span> </p>
+            <p></p>
+        </div>
+        <div class="span9">
+            <!-- General Equation-->
+            <br />
+            <blockquote class="article-headlines">
+                <p class="lead ">
+                    <strong> General Equation</strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <p>The general equation of a conic section is given below.</p>
+            <p>
+                \begin{align}
+                \ A x^2 + B x y + C y^2 + D x + E y + F = 0 \\
+                \end{align}
+            </p>
+            <p>
+                The type of curve is dictated by the quantity $B^2 - 4 A C$. If it is less than $0$ the curve is an ellipse or circle. If equal to $0$ then a parabola, if greater than $0$ then a hyperbola.
+            </p>
+            <!-- General Equation-->
+            <!-- Maple-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> Maple Sample Code </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+
+            <p class="text-center">
+                <img class="text-cente" src="<%=item[:article_resource_path]%>1.png">
+            </p>
+            <br />
+                <pre class="prettyprint linenums">with(plots);
+circle := implicitplot(x^2+y^2 = 1, x = -1 .. 1, y = -1 .. 1);
+display(circle, scaling = constrained);</pre>
+            <p class="text-center">
+                <img class="text-cente" src="<%=item[:article_resource_path]%>2.png">
+            </p>
+            <br />
+                <pre class="prettyprint linenums">with(plots);
+ellipse := implicitplot((1/4)*x^2+(1/9)*y^2 = 1, x = -2 .. 2, y = -3 .. 3);
+display(ellipse, scaling = constrained);</pre>
+            <p class="text-center">
+                <img class="text-cente" src="<%=item[:article_resource_path]%>3.png">
+            </p>
+            <br />
+                <pre class="prettyprint linenums">with(plots);
+parabola := implicitplot(y^2 = 4*x, x = -3 .. 3, y = -4 .. 4);
+display(parabola, scaling = constrained);</pre>
+            <p class="text-center">
+                <img class="text-cente" src="<%=item[:article_resource_path]%>4.png">
+            </p>
+            <br />
+                <pre class="prettyprint linenums">with(plots);
+hyperbola := implicitplot((1/2)*x^2-(1/6)*y^2 = 1, x = -3 .. 3, y = -4 .. 4);
+display(hyperbola, scaling = constrained);</pre>
+            <p>
+                <a href="<%=item[:article_resource_path]%>Conic_Sections.mw"> Download Maple Code </a>
+            </p>
+            <!-- Maple-->
+            <!-- To Developers-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead muted">
+                    <strong> To Developers </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <pre class="prettyprint linenums"> //Source code is not available</pre>
+            <!-- To Developers-->
+            <!-- Refrences-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> References </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <ol>
+                <li> <a href="http://en.wikipedia.org/wiki/Conic_section"> Wikipedia, Conic section </a> </li>
+                <li> <a href="http://paulbourke.net/geometry/conic/"> Paulbourke, Conic Sections </a> </li>
+                <li> <a href="mailto:milad261@gmail.com"> Maple Code Author : Milad Ghanimat</a> </li>
+            </ol>
+            <!-- Refrences-->
+            <br />
+        </div>
+    </div>
+</div>

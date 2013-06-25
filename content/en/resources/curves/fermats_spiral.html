@@ -1,5 +1,123 @@
 ---
-title: A New Item
----
+title: Fermat's Spiral
 
-Hi, I'm a new item!
+requirementsScripts :
+- mathjax
+- prettify
+
+kind : article
+
+article_name : Fermat's Spiral
+article_parent : Curves
+article_parent_path : /en/resources/curves/
+article_description: description
+article_logo_path : /curves/fermats_spiral/small.gif
+article_resource_path : /assets/resourcemanager/curves/fermats_spiral/
+---
+<div class="row">
+    <div class="span10">
+        <div class="span5">
+            <p>
+                <strong>Fermat's spiral</strong> (also known as a <strong>parabolic spiral</strong>)  is an Archimedean spiral with $m=2$.
+            </p>
+            <br/>
+        </div>
+        <div class="span4">
+            <p class="text-center"> <img src="<%=item[:article_resource_path]%>pic_fermats_spiral.png" class="img-rounded"> </p>
+            <p class="text-center"> <span class="label label-info" >Fermat's spiral</span> </p>
+            <p></p>
+        </div>
+        <div class="span9">
+            <!-- Equation-->
+            <br />
+            <blockquote class="article-headlines">
+                <p class="lead ">
+                    <strong> Equation</strong>
+                </p>
+            </blockquote>
+            <hr>
+            <p>The general equation of Fermat's spiral is given below.</p>
+            <p>
+                \begin{align}
+                \ r = \pm  \theta ^\frac{1}{2}\\
+                \end{align}
+            </p>
+            <p>
+                In polar coordinates; the more general Fermat's spiral follows $r^2 =  a^2 \theta$ </p>
+            <!-- Equation-->
+
+
+            <!-- The curvature and arc length-->
+            <br />
+            <blockquote class="article-headlines">
+                <p class="lead ">
+                    <strong> The curvature and arc length</strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <p>The curvature and arc length of the positive branch of Fermat's spiral are</p>
+            <p>
+                \begin{align}
+                \ \kappa = \frac{2 \sqrt{\theta} ( 3 + 4\theta ^2) }{ a ( 1 + 4\theta ^2)^\frac{3}{2}} \\
+                \end{align}
+            </p>
+            <p>
+                \begin{align}
+                \ \tau = a \sqrt{\theta} 2 \sideset{_2}{_1}F \bigg( -\frac{1}{2} , \frac{1}{4} , \frac{4}{5} , -4\theta ^2 \bigg)  \\
+                \   = \frac{1}{8} (1-i)a B \bigg(  -4\theta ^2 , \frac{1}{4} , \frac{3}{2} \bigg) \\
+                \end{align}
+            </p><p></p>
+            <p>where $\sideset{_2}{_1}F \big( a,b;c;d \big)$ is a hypergeometric function and $B\big(z;a,b\big)$ is an incomplete beta function. </p>
+            <!-- The curvature and arc length-->
+
+            <!-- Maple-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> Maple Sample Code </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+
+            <p class="text-center">
+                <img class="text-cente" src="<%=item[:article_resource_path]%>pic_fermats_spiral.png">
+            </p>
+            <br />
+                <pre class="prettyprint linenums">with(plots);
+Lp := plot([sqrt(t)*cos(t), sqrt(t)*sin(t), t = 0 .. 10*Pi]);
+Rp := plot([-sqrt(t)*cos(t), -sqrt(t)*sin(t), t = 0 .. 10*Pi]);
+display({Lp, Rp});
+</pre>
+            <p>
+                <a href="<%=item[:article_resource_path]%>fermats_spiral.mw"> Download Maple Code </a>
+            </p>
+            <!-- Maple-->
+            <!-- To Developers-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead muted">
+                    <strong> To Developers </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <pre class="prettyprint linenums"> //Source code is not available</pre>
+            <!-- To Developers-->
+            <!-- Refrences-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> References </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <ol>
+                <li> <a href="http://en.wikipedia.org/wiki/Fermat's_spiral"> Wikipedia, Fermat's Spiral </a> </li>
+                <li> <a href="http://mathworld.wolfram.com/FermatsSpiral.html"> Mathworld.Wolfram, Fermat's Spiral</a> </li>
+                <li> <a href="http://paulbourke.net/geometry/fermatsspiral/"> Paulbourke, Fermats spiral </a> </li>
+                <li> <a href="mailto:milad261@gmail.com"> Maple Code Author : Milad Ghanimat</a> </li>
+            </ol>
+            <!-- Refrences-->
+            <br />
+        </div>
+    </div>
+</div>

@@ -43,6 +43,14 @@ def kind_of(item)
   end
 end
 
+def parent_of(item)
+  if item[:article_parent].nil?
+    '(none)'
+  else
+    item[:article_parent]
+  end
+end
+
 def get_article_name_of(item)
   if item[:article_name].nil?
     '(none)'
@@ -69,4 +77,8 @@ end
 
 def get_all_articles
   all_items.select { |i| !kind_of(i).nil? && kind_of(i) == 'article'}
+end
+
+def get_all_articles_of(parent)
+  all_items.select { |i| !kind_of(i).nil? && kind_of(i) == 'article' && parent_of(i) == parent}
 end

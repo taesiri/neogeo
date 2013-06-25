@@ -1,5 +1,114 @@
 ---
-title: A New Item
----
+title: Astroid
 
-Hi, I'm a new item!
+requirementsScripts :
+    - mathjax
+    - prettify
+
+kind : article
+
+article_name : Astroid
+article_parent : Curves
+article_parent_path : /en/resources/curves/
+article_description: description
+article_logo_path : /curves/astroid/small.gif
+article_resource_path : /assets/resourcemanager/curves/astroid/
+---
+<div class="row">
+    <div class="span10">
+        <div class="span5">
+            <p>An <strong>Astroid</strong> (sometimes spelled <strong>asteroid</strong>) is a particular mathematical curve: a hypocycloid with four cusps.</p>
+        </div>
+        <div class="span4">
+            <p class="text-center"><img src="<%=item[:article_resource_path]%>pic_astroid.png" class="img-rounded"></p>
+            <p class="text-center"><span class="label label-info">Astroid</span></p>
+
+            <p></p>
+        </div>
+        <div class="span9">
+            <!-- Equations-->
+            <blockquote class="article-headlines">
+                <p class="lead ">
+                    <strong> Equations </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <p> In Cartesian coordinates, </p><br/>
+
+            <p>
+                \begin{align}
+                \ x^{\frac{2}{3}} + y^{\frac{2}{3}} = 1\\
+                \end{align}
+            </p>
+            <br/>
+
+            <p>
+                A generalization of the curve to :
+            </p>
+            <br/>
+
+            <p>
+                \begin{align}
+                \ \bigg(\frac{x}{a}\bigg)^{\frac{2}{3}} + \bigg(\frac{y}{b}\bigg)^{\frac{2}{3}} = 1\\
+                \end{align}
+            </p>
+            <!-- Equations-->
+
+            <!-- Maple-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> Maple Sample Code </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <p class="text-center">
+                <img class="text-cente" src="<%=item[:article_resource_path]%>astroid_maple.gif">
+            </p>
+            <br/>
+                <pre class="prettyprint linenums">R:=4: r:=1: N:=180:
+A:=plot([R*cos(t),R*sin(t),t=0..2*Pi],color=blue,thickness=2):
+B:=seq(plottools[disk]([(R-r)*cos(2*Pi*k/N),(R-r)*sin(2*Pi*k/N)],r,color=yellow),k=1..N):
+C:=seq(plottools[disk]([(R-r)*cos(2*Pi*k/N)+r*cos(2*Pi*k/N-R*2*Pi*k/r/N),(R-r)*sin(2*Pi*k/N)+r*sin(2*Pi*k/N-R*2*Pi*k/r/N)],r/15,color=red),k=1..N):
+F:=seq(plot([(R-r)*cos(t)+r*cos(t-R*t/r),(R-r)*sin(t)+r*sin(t-R*t/r),t=0..2*Pi*k/N],x=-R..R,y=-R..R,color=red,thickness=2),k=1..N):
+for k from 1 to N do
+
+                  E[k]:=plots[display](A,C[k],B[k],F[k]);
+
+                  end do:
+plots[display]([seq(E[k],k=1..N)],insequence=true,scaling=constrained,view=[-R-1..R+1,-R-1..R+1]);</pre>
+            <p>
+                <a href="<%=item[:article_resource_path]%>astroid.mw"> Download Maple Code </a>
+            </p>
+            <!-- Maple-->
+
+
+            <!-- To Developers-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead muted">
+                    <strong> To Developers </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <pre class="prettyprint linenums"> //Source code is not available</pre>
+            <!-- To Developers-->
+            <!-- Refrences-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> References </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <ol>
+                <li><a href="http://en.wikipedia.org/wiki/Astroid"> Wikipedia, Astroid </a></li>
+                <li><a href="http://paulbourke.net/geometry/astroid/"> Paulbourke, Astroid </a></li>
+                <li><a href="http://mathworld.wolfram.com/Astroid.html"> Mathworld.Wolfram, Astroid </a></li>
+
+            </ol>
+            <!-- Refrences-->
+            <br/>
+        </div>
+    </div>
+</div>

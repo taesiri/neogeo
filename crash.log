@@ -1,52 +1,50 @@
-Crashlog created at 2013-06-25 09:28:47 +0430
+Crashlog created at 2013-06-25 23:56:17 +0430
 
 ===== MESSAGE:
 
-RuntimeError: Could not parse YAML for content/en/resources/surfaces/pseudoshpere.html: (<unknown>): could not find expected ':' while scanning a simple key at line 14 column 1
+SyntaxError: item /en/resources/curves/archimedes_spiral/ (rep default):15: unknown regexp options - rrcaagr
 
 ===== COMPILATION STACK:
 
-  (empty)
+  - [item]   /en/resources/curves/archimedes_spiral/ (rep default)
 
 ===== STACK TRACE:
 
-  0. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/data_sources/filesystem.rb:266:in `rescue in parse'
-  1. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/data_sources/filesystem.rb:263:in `parse'
-  2. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/data_sources/filesystem.rb:89:in `block in load_objects'
-  3. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/data_sources/filesystem.rb:78:in `each'
-  4. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/data_sources/filesystem.rb:78:in `map'
-  5. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/data_sources/filesystem.rb:78:in `load_objects'
-  6. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/data_sources/filesystem.rb:37:in `items'
-  7. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/source_data/site.rb:325:in `block in load_items'
-  8. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/source_data/site.rb:324:in `each'
-  9. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/source_data/site.rb:324:in `load_items'
-  10. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/source_data/site.rb:243:in `load'
-  11. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/source_data/site.rb:127:in `layouts'
-  12. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/compilation/compiler.rb:187:in `dependency_tracker'
-  13. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/memoization.rb:56:in `block in memoize'
-  14. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/compilation/compiler.rb:456:in `stores'
-  15. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/compilation/compiler.rb:146:in `unload'
-  16. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/source_data/site.rb:274:in `unload'
-  17. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/source_data/site.rb:254:in `rescue in load'
-  18. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/source_data/site.rb:258:in `load'
-  19. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/command_runner.rb:63:in `load_site'
-  20. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/commands/compile.rb:358:in `run'
-  21. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/command_runner.rb:14:in `block in call'
-  22. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/error_handler.rb:70:in `handle_while'
-  23. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
-  24. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/command_runner.rb:13:in `call'
-  25. /var/lib/gems/1.9.1/gems/cri-2.3.0/lib/cri/command_dsl.rb:185:in `block in runner'
-  26. /var/lib/gems/1.9.1/gems/cri-2.3.0/lib/cri/command.rb:296:in `call'
-  27. /var/lib/gems/1.9.1/gems/cri-2.3.0/lib/cri/command.rb:296:in `run_this'
-  28. /var/lib/gems/1.9.1/gems/cri-2.3.0/lib/cri/command.rb:249:in `run'
-  29. /var/lib/gems/1.9.1/gems/cri-2.3.0/lib/cri/command.rb:262:in `run'
-  30. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli.rb:52:in `block in run'
-  31. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/error_handler.rb:70:in `handle_while'
-  32. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
-  33. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli.rb:50:in `run'
-  34. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/bin/nanoc:19:in `<top (required)>'
-  35. /usr/local/bin/nanoc:23:in `load'
-  ... 38 more lines omitted. See full crash log for details.
+  0. /usr/lib/ruby/1.9.1/erb.rb:838:in `eval'
+  1. /usr/lib/ruby/1.9.1/erb.rb:838:in `result'
+  2. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/filters/erb.rb:34:in `run'
+  3. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/compilation/filter.rb:122:in `setup_and_run'
+  4. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/result_data/item_rep.rb:344:in `filter'
+  5. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/compilation/item_rep_proxy.rb:47:in `filter'
+  6. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/compilation/rule_context.rb:55:in `filter'
+  7. ./Rules:34:in `block in load'
+  8. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/compilation/rule.rb:68:in `instance_eval'
+  9. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/compilation/rule.rb:68:in `apply_to'
+  10. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/compilation/compiler.rb:384:in `compile_rep'
+  11. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/compilation/compiler.rb:340:in `block in compile_reps'
+  12. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/compilation/compiler.rb:333:in `loop'
+  13. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/compilation/compiler.rb:333:in `compile_reps'
+  14. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/compilation/compiler.rb:89:in `run'
+  15. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/base/source_data/site.rb:58:in `compile'
+  16. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/commands/compile.rb:363:in `block in run'
+  17. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/commands/compile.rb:404:in `run_listeners_while'
+  18. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/commands/compile.rb:362:in `run'
+  19. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/command_runner.rb:14:in `block in call'
+  20. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/error_handler.rb:70:in `handle_while'
+  21. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
+  22. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/command_runner.rb:13:in `call'
+  23. /var/lib/gems/1.9.1/gems/cri-2.3.0/lib/cri/command_dsl.rb:185:in `block in runner'
+  24. /var/lib/gems/1.9.1/gems/cri-2.3.0/lib/cri/command.rb:296:in `call'
+  25. /var/lib/gems/1.9.1/gems/cri-2.3.0/lib/cri/command.rb:296:in `run_this'
+  26. /var/lib/gems/1.9.1/gems/cri-2.3.0/lib/cri/command.rb:249:in `run'
+  27. /var/lib/gems/1.9.1/gems/cri-2.3.0/lib/cri/command.rb:262:in `run'
+  28. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli.rb:52:in `block in run'
+  29. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/error_handler.rb:70:in `handle_while'
+  30. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
+  31. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/lib/nanoc/cli.rb:50:in `run'
+  32. /var/lib/gems/1.9.1/gems/nanoc-3.6.4/bin/nanoc:19:in `<top (required)>'
+  33. /usr/local/bin/nanoc:23:in `load'
+  ... 36 more lines omitted. See full crash log for details.
 
 ===== VERSION INFORMATION:
 

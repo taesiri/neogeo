@@ -1,5 +1,109 @@
 ---
-title: A New Item
----
+title: Viviani's Curve
 
-Hi, I'm a new item!
+requirementsScripts :
+    - mathjax
+    - prettify
+
+kind : article
+
+article_name : Viviani's Curve
+article_parent : Curves
+article_parent_path : /en/resources/curves/
+article_description: description
+article_logo_path : /curves/viviani/small.gif
+article_resource_path : /assets/resourcemanager/curves/viviani/
+---
+<div class="row">
+    <div class="span10">
+        <div class="span5">
+            <p>In <strong>mathematics</strong>, particularly geometry, Viviani's curve, also known as Viviani's window,
+                is a figure eight shaped space curve named after the Italian mathematician Vincenzo Viviani, the
+                intersection of a sphere with a cylinder that is tangent to the sphere and passes through the center of
+                the sphere. </p>
+        </div>
+        <div class="span4">
+            <p class="text-center"><img src="<%=item[:article_resource_path]%>viviani.gif" class="img-rounded"></p>
+            <p class="text-center"><span class="label label-info">Sphere-cylinder intersection</span></p>
+        </div>
+        <div class="span9">
+            <!-- Equations-->
+            <blockquote class="article-headlines">
+                <p class="lead ">
+                    <strong> Equations </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <p> The curve can be obtained by intersecting a sphere of radius $2a$ centered at the origin, </p>
+
+            <p>
+                \begin{align}
+                \ x^2 + y^2 + z^2 = 4a^2 \\
+                \end{align}
+            </p>
+
+            <p>with the cylinder centered at $(a,0,0)$ of radius $a$ given by </p>
+
+            <p>
+                \begin{align}
+                \ (x-a)^2 + y^2 = a^2\\
+                \end{align}
+            </p>
+
+            <p>The resulting curve of intersection,$V$, can be parameterized by $t$ to give the parametric equation of
+                Viviani's curve: </p>
+
+            <p>
+                \begin{align}
+                \ V(t) = \Bigg< a \big(1+\cos(t)\big), a\sin(t), 2a\sin(\frac{t}{2})\Bigg>
+                \end{align}
+            </p>
+            <!-- Equations-->
+            <!-- Maple-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> Maple Sample Code </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <p class="text-center">
+                <img class="text-cente" src="<%=item[:article_resource_path]%>viviani_maple.gif">
+            </p>
+            <br/>
+                <pre class="prettyprint linenums">restart;
+with(plots):
+display([spacecurve([1+cos(t),sin(t),sqrt(4-sin(t)^2-(1+cos(t))^2)],t=0..2*Pi,color=red,thickness=4),spacecurve([1+cos(t),sin(t),-sqrt(4-sin(t)^2-(1+cos(t))^2)],t=0..2*Pi,color=red,thickness=4),sphereplot(2,theta=0..2*Pi,phi=0..Pi,grid=[36,48],color=green,style=wireframe),plot3d([1+cos(t),sin(t),s],t=0..2*Pi,s=-2..2,grid=[36,48],color=cyan,style=wireframe),spacecurve([1+cos(t),sin(t),2.01],t=0..2*Pi,color=blue,thickness=1),spacecurve([1+cos(t),sin(t),-2.03],t=0..2*Pi,color=blue,thickness=1)],scaling=constrained,orientation=[-95,60],title=`Viviani's curve`,titlefont=[TIMES,BOLD,24]); </pre>
+            <p>
+                <a href="<%=item[:article_resource_path]%>Viviani.mw"> Download Maple Code </a>
+            </p>
+            <!-- Maple-->
+            <!-- To Developers-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead muted">
+                    <strong> To Developers </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <pre class="prettyprint linenums"> //Source code is not available</pre>
+            <!-- To Developers-->
+            <!-- Refrences-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> References </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <ol>
+                <li><a href="http://en.wikipedia.org/wiki/Viviani's_curve"> Wikipedia, Viviani's curve </a></li>
+                <li><a href="http://math.la.asu.edu/~kawski/MAPLE/272/c_curves/viviani1.html"> Math.la.asu.edu,
+                    Viviani's curve </a></li>
+                <li><a href="http://paulbourke.net/geometry/viviani/"> Paulbourke, Viviani's curve </a></li>
+            </ol>
+            <!-- Refrences-->
+            <br/>
+        </div>
+    </div>
+</div>

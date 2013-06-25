@@ -91,6 +91,11 @@
     </script>
     <% end %>
 
+    <% if requirementsScripts.include? 'jxgraph' %>
+    <script type="text/javascript" src="/assets/js/jsxgraphcore.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/css/jsxgraph.css" />
+    <% end %>
+
 </head>
 <body>
 <div id="wrap">
