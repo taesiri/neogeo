@@ -1,0 +1,125 @@
+---
+title: Steiner Roman Surface
+
+requirementsScripts :
+- mathjax
+- prettify
+
+kind : article
+
+article_name : Steiner Roman Surface
+article_parent : Surfaces
+article_parent_path : /en/resources/surfaces/
+article_description:  The <strong>Roman surface</strong>  or <strong> Steiner surface </strong> (so called because Jakob Steiner was in Rome when he thought of it) is a self-intersecting mapping of the real projective plane into three-dimensional space, with an unusually high degree of symmetry.
+article_logo_path : /surfaces/roman_surface/small.gif
+---
+<div class="row">
+    <div class="span10">
+        <div class="span5">
+            <p>
+                The <strong>Roman surface</strong>  or <strong> Steiner surface </strong> (so called because Jakob Steiner was in Rome when he thought of it) is a self-intersecting mapping of the real projective plane into three-dimensional space, with an unusually high degree of symmetry. This mapping is not an immersion of the projective plane; however the figure resulting from removing six singular points is one.
+            </p>
+            <p></p><br />
+            <p></p>
+        </div>
+        <div class="span4">
+            <p class="text-center"> <img src="/assets/resourcemanager/surfaces/roman_surface/steinerss_roman_surface.gif" class="img-rounded"> </p>
+            <p class="text-center"> <span class="label label-info" >An animation of the Roman Surface</span> </p>
+            <p></p>
+        </div>
+        <div class="span9">
+            <!-- Equation-->
+            <br />
+            <blockquote class="article-headlines">
+                <p class="lead ">
+                    <strong> Equation</strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <p>The Roman surface can given by the equation</p>
+            <p>
+                \begin{align}
+                \  \big( x^2 + y^2 + z^2 - k^2  \big)^2 = \big[ (z-k)^2 -2x^2 \big] \big[ (z+k)^2 -2y^2 \big] \\
+                \end{align}
+            </p>
+            <br />
+            <p>
+                Solving for $z$ gives the pair of equations
+            </p>
+            <p>
+                \begin{align}
+                \ z = \frac{k(y^2-x^2) \pm (x^2-y^2) \sqrt{k^2-x^2-y^2}}{2(x^2+y^2)} \\
+                \end{align}
+            </p>
+            <br />
+            <!-- Equation-->
+            <!-- Maple-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> Maple Sample Code </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+
+            <p class="text-center">
+                <img class="text-cente" src="/assets/resourcemanager/surfaces/roman_surface/pic_roman_surface_maple.png">
+            </p>
+            <br />
+                <pre class="prettyprint linenums">with(plots):
+plot3d([sin(2*u)*cos(v)^2, sin(u)*sin(2*v), cos(u)*sin(2*v)], u=0..Pi, v=0..Pi, title=`Steiner's Roman Surface`);</pre>
+            <p>
+                <a href="/assets/resourcemanager/surfaces/roman_surface/roman_surface.mw"> Download Maple Code </a>
+            </p>
+            <!-- Maple-->
+            <!-- Sage -->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> Sage Sample Code </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+
+            <p class="text-center">
+                <img class="text-cente" src="/assets/resourcemanager/surfaces/roman_surface/pic_roman_surface_sage.png">
+            </p>
+            <br />
+                <pre class="prettyprint linenums">u, v = var('u,v')
+fx = (sin(2 * u) * cos(v) * cos(v))
+fy = (sin(u) * sin(2 * v))
+fz = (cos(u) * sin(2 * v))
+parametric_plot3d([fx, fy, fz], (u, -pi/2, pi/2), (v, -pi/2,pi/2), frame=False, color="blue")</pre>
+            <p>
+                <a href="/assets/resourcemanager/surfaces/roman_surface/roman_surface_sage.py"> Download Sage Code </a>
+            </p>
+            <!-- Sage-->
+            <!-- To Developers-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead muted">
+                    <strong> To Developers </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <pre class="prettyprint linenums"> //Source code is not available</pre>
+            <!-- To Developers-->
+            <!-- Refrences-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> References </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <ol>
+                <li> <a href="http://en.wikipedia.org/wiki/Roman_surface"> Wikipedia, Roman surface </a> </li>
+                <li> <a href="http://paulbourke.net/geometry/steiner/"> Paulbourke, Steiner surface </a> </li>
+                <li> <a href="http://mathworld.wolfram.com/RomanSurface.html"> Mathworld.Wolfram, Roman Surface </a> </li>
+                <li> <a href="http://www.math.umbc.edu/~rouben/dynagraph/examples.html"> University of Maryland Website, Mathematics Department </a> </li>
+            </ol>
+            <!-- Refrences-->
+            <br />
+        </div>
+    </div>
+</div>

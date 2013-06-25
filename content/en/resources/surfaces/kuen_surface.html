@@ -1,0 +1,172 @@
+---
+title: Kuen's Surface
+
+requirementsScripts :
+- mathjax
+- prettify
+
+kind : article
+
+article_name : Kuen's Surface
+article_parent : Surfaces
+article_parent_path : /en/resources/surfaces/
+article_description: The Kuen surface is a special case of Enneper's negative curvature surfaces.
+article_logo_path : /surfaces/kuen_surface/small.gif
+---
+
+<div class="row">
+    <div class="span10">
+        <div class="span5">
+            <p>
+                The Kuen surface is a special case of Enneper's negative curvature surfaces.
+            </p>
+            <p></p><br />
+            <p></p>
+        </div>
+        <div class="span4">
+            <p class="text-center"> <img src="/assets/resourcemanager/surfaces/kuen_surface/kuen1.gif" class="img-rounded"> </p>
+            <p class="text-center"> <span class="label label-info" >Kuen's surface</span> </p>
+            <p></p>
+        </div>
+        <div class="span9">
+            <!-- Equation-->
+            <br />
+            <blockquote class="article-headlines">
+                <p class="lead ">
+                    <strong> Equation</strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <p>
+                \begin{align}
+                \  x = \frac{2\big( \cos(u) + u\sin(u) \big) \sin(v)}{1+u^2\sin^2(v)} \\
+                \end{align}
+
+                \begin{align}
+                \  y  = \frac{2\big( \sin(u) + u\cos(u) \big) \sin(v)}{1+u^2\sin^2(v)} \\
+                \end{align}
+
+                \begin{align}
+                \  z = \ln\big[ \tan( \frac{1}{2} v ) \big] + \frac{2\cos(v)}{1+u^2sin^2(v)} \\
+                \end{align}
+            </p>
+            <p>
+                for ,  $v \in [0,\pi)$, $u \in [0,2\pi)$.
+            </p>
+            <br />
+            <!-- Equation
+
+             <!-- Gaussian-->
+            <br />
+            <blockquote class="article-headlines">
+                <p class="lead ">
+                    <strong> Gaussian and mean Curvatures</strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <p>
+                The Gaussian and mean curvatures are
+            </p>
+            <p>
+                \begin{align}
+                \  K = -1 \\
+                \end{align}
+
+                \begin{align}
+                \  H = -\frac{\csc(v)}{4u} + \frac{1}{4}u\sin(v)\bigg[ 1 + \frac{8}{2-u^2+u^2\cos(2v)} \bigg] \\
+                \end{align}
+            </p> <br />
+            <p>
+                and the principal curvatures are
+            </p>
+
+            <p>
+                \begin{align}
+                \ \kappa_1 = \frac{4u\sin(v)}{2-u^2+u^2\cos(2v)}    \\
+                \end{align}
+
+                \begin{align}
+                \ \kappa_2 =  - \frac{\big[2-u^2+u^2\cos(2v)\big]\csc(v)}{4u}  \\
+                \end{align}
+            </p>
+
+
+            <br />
+            <!-- Gaussian-->
+
+            <!-- Maple-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> Maple Sample Code </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+
+            <p class="text-center">
+                <img class="text-cente" src="/assets/resourcemanager/surfaces/kuen_surface/pic_kuen_maple.png">
+            </p>
+            <br />
+                <pre class="prettyprint linenums">w := 1 + u^2*sin(v)^2;
+x := 2*(cos(u)+u*sin(u))*sin(v)/w;
+y := 2*(sin(u)-u*cos(u))*sin(v)/w;
+z := log(tan(v/2)) + 2*cos(v)/w;
+plot3d([x,y,z], u=-4..4, v=0.05..Pi-0.05,title=`Kuen's surface of constant negative curvature`);
+
+# cleanup:
+x := x; y := y; z := z; w := w;</pre>
+            <p>
+                <a href="/assets/resourcemanager/surfaces/kuen_surface/kuen_maple.mw"> Download Maple Code </a>
+            </p>
+            <!-- Maple-->
+            <!-- Sage -->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> Sage Sample Code </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+
+            <p class="text-center">
+                <img class="text-cente" src="/assets/resourcemanager/surfaces/kuen_surface/pic_kuen_sage.png">
+            </p>
+            <br />
+                <pre class="prettyprint linenums">var('u,v')
+fx = (2*(cos(u) + u*sin(u))*sin(v))/(1+ u^2*sin(v)^2)
+fy = (2*(sin(u) - u*cos(u))*sin(v))/(1+ u^2*sin(v)^2)
+fz = log(tan(1/2 *v)) + (2*cos(v))/(1+ u^2*sin(v)^2)
+parametric_plot3d([fx, fy, fz], (u, 0, 2*pi), (v, 0.01, pi-0.01), plot_points = [100,100], frame=False, color="purple")</pre>
+            <p>
+                <a href="/assets/resourcemanager/surfaces/kuen_surface/kuen_sage.py"> Download Sage Code </a>
+            </p>
+            <!-- Sage-->
+            <!-- To Developers-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead muted">
+                    <strong> To Developers </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <pre class="prettyprint linenums"> //Source code is not available</pre>
+            <!-- To Developers-->
+            <!-- Refrences-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> References </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <ol>
+                <li> <a href="http://paulbourke.net/geometry/kuen/"> Paulbourke, Kuen surface </a> </li>
+                <li> <a href="http://mathworld.wolfram.com/KuenSurface.html"> Mathworld.Wolfram, Kuen Surface </a> </li>
+                <li> <a href="http://www.math.umbc.edu/~rouben/dynagraph/examples.html"> University of Maryland Website, Mathematics Department </a> </li>
+                <li> <a href="http://www.amazon.com/exec/obidos/ASIN/1584884487/ref=nosim/weisstein-20"> Modern Differential Geometry of Curves and Surfaces with Mathematica, Third Edition </a> </li>
+            </ol>
+            <!-- Refrences-->
+            <br />
+        </div>
+    </div>
+</div>

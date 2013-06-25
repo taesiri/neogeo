@@ -1,0 +1,145 @@
+---
+title: Pseudosphere
+
+requirementsScripts :
+- mathjax
+- prettify
+
+kind : article
+
+article_name : Pseudosphere
+article_parent : Surfaces
+article_parent_path : /en/resources/surfaces/
+article_description: In <strong>geometry</strong>, the term <strong>pseudosphere</strong> is used to describe various surfaces with constant negative gaussian curvature.
+article_logo_path : /surfaces/pseudosphere/small.gif
+---
+
+<div class="row">
+    <div class="span10">
+        <div class="span5">
+            <p>
+
+                In <strong>geometry</strong>, the term <strong>pseudosphere</strong> is used to describe various
+                surfaces with constant negative gaussian curvature. Depending on context, it can refer to either a
+                theoretical surface of constant negative curvature, to a tractricoid, or to a hyperboloid.
+            </p> <br/>
+        </div>
+        <div class="span4">
+            <p class="text-center"><img src="/assets/resourcemanager/surfaces/pseudosphere/pic-PseudoSphere.jpg" class="img-rounded"></p>
+
+            <p class="text-center"><span class="label label-info">Pseudosphere</span></p>
+
+            <p></p>
+        </div>
+        <div class="span9">
+            <!-- Equation-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead ">
+                    <strong> Equations </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <p>The Cartesian parametric equations are :</p>
+            <br/>
+
+            <p>
+                \begin{align}
+                \ x = sech(u) \cos(v) \\
+                \end{align}
+                \begin{align}
+                \ y = sech(u)sin(v) \\
+                \end{align}
+                \begin{align}
+                \ z = u - \tanh(u) \\
+                \end{align}
+            </p>
+            <br/>
+
+            <p> where</p>
+
+            <p>
+                \begin{align}
+                \ u \in [-2\pi,2\pi], \ v \in [-2\pi,2\pi]\\
+                \end{align}
+            </p>
+            <br/>
+            <!-- Equation-->
+            <!-- Maple-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> Maple Sample Code </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+
+            <p class="text-center">
+                <img class="text-center" src="/assets/resourcemanager/surfaces/pseudosphere/pic_pseudosphere-maple.png">
+            </p>
+            <br/>
+                            <pre class="prettyprint linenums">with(plots);
+x := u-tanh(u);
+y := sech(u)*cos(v);
+z := sech(u)*sin(v);
+plot3d([x, y, z], u = -2*Pi .. 2*Pi, v = -Pi .. Pi, grid = [15, 200], title = 'Pseudosphere')</pre>
+            <p>
+                <a href="/assets/resourcemanager/surfaces/pseudosphere/pseudosphere-maple.mw"> Download Maple Code </a>
+            </p>
+            <!-- Maple-->
+
+            <!-- Sage -->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> Sage Sample Code </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+
+            <p class="text-center">
+                <img class="text-center" src="/assets/resourcemanager/surfaces/pseudosphere/pic_pseudosphere-sage.png">
+            </p>
+            <br/>
+                            <pre class="prettyprint linenums">u, v = var('u,v')
+fx = u - tanh(u)
+fy = sech(u)*cos(v)
+fz = sech(u)*sin(v)
+parametric_plot3d([fx, fy, fz], (u, -2*pi,2*pi), (v, -2*pi, 2*pi),frame=False, color="gray")</pre>
+            <p>
+                <a href="/assets/resourcemanager/surfaces/pseudosphere/pseudosphere-sage.py"> Download Sage Code </a>
+            </p>
+            <!-- Sage-->
+
+            <!-- To Developers-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead muted">
+                    <strong> To Developers </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <pre class="prettyprint linenums"> //Source code is not available</pre>
+            <!-- To Developers-->
+            <!-- Refrences-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> References </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <ol>
+                <li><a href="http://en.wikipedia.org/wiki/Pseudosphere"> Wikipedia, Pseudosphere </a></li>
+                <li><a href="http://paulbourke.net/geometry/pseudosphere/"> Paulbourke, Pseudosphere </a></li>
+                <li><a href="http://mathworld.wolfram.com/Pseudosphere.html"> Mathworld, Pseudosphere </a></li>
+                <li><a href="http://xahlee.info/surface/pseudosphere/pseudosphere.html"> Xahlee.info, Pseudosphere </a>
+                </li>
+                <li><a href="http://books.google.com/books?id=xb48zk0wJfIC&dq=Pseudosphere+Maple&source=gbs_navlinks_s">
+                    Differential Geometry and Its Applications, John Oprea </a></li>
+            </ol>
+            <!-- Refrences-->
+            <br/>
+        </div>
+    </div>
+</div

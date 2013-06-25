@@ -1,0 +1,150 @@
+---
+title: Klein Bottle
+
+requirementsScripts :
+- mathjax
+- prettify
+
+kind : article
+
+article_name : Klein Bottle
+article_parent : Surfaces
+article_parent_path : /en/resources/surfaces/
+article_description:  In mathematics, the <strong>Klein bottle </strong> is an example of a non-orientable surface; informally, it is a surface (a two-dimensional manifold) in which notions of left and right cannot be consistently defined.
+article_logo_path : /surfaces/klein_bottle/small.gif
+---
+
+<div class="row">
+    <div class="span10">
+        <div class="span5">
+            <p>
+                In mathematics, the <strong>Klein bottle </strong> is an example of a non-orientable surface; informally, it is a surface (a two-dimensional manifold) in which notions of left and right cannot be consistently defined. Other related non-orientable objects include the Möbius strip and the real projective plane. Whereas a Möbius strip is a surface with boundary, a Klein bottle has no boundary (for comparison, a sphere is an orientable surface with no boundary).
+            </p>
+
+            <p> The Klein bottle was first described in 1882 by the German mathematician Felix Klein. It may have been originally named the Kleinsche Fläche ("Klein surface") and that this was incorrectly interpreted as Kleinsche Flasche ("Klein bottle"), which ultimately led to the adoption of this term in the German language as well.</p><br />
+            <p></p>
+        </div>
+        <div class="span4">
+            <p class="text-center"> <img src="/assets/resourcemanager/surfaces/klein_bottle/pic_klein_bottle.png" class="img-rounded"> </p>
+            <p class="text-center"> <span class="label label-info" >A two-dimensional representation of the Klein <br /> bottle immersed in three-dimensional space</span> </p>
+            <p></p>
+        </div>
+        <div class="span9">
+            <!-- Equation-->
+            <br />
+            <blockquote class="article-headlines">
+                <p class="lead ">
+                    <strong> Equation</strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <p>The equation for the usual immersion is given by the implicit equation</p>
+            <p>
+                \begin{align}
+                \ \bigg( x^2 + y^2 + z^2 + 2y -1 \bigg)\bigg[ \bigg( x^2 + y^2 + z^2 - 2y -1\bigg)^2 - 8z^2 \bigg] + 16xz \bigg( x^2 + y^2 + z^2 - 2y -1\bigg)= 0 \\
+                \end{align}
+            </p>
+            <!-- Equation-->
+            <!-- Maple-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> Maple Sample Code </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+
+            <p class="text-center">
+                <img class="text-cente" src="/assets/resourcemanager/surfaces/klein_bottle/klien_maple.png">
+            </p>
+            <br />
+                <pre class="prettyprint linenums">with(plots):
+plot3d([(4*(1-(1/2)*cos(u)))*sin(v), 6*cos(u)*(1+sin(u))+(4*(1-(1/2)*cos(u)))*(cos(u)*(1-Heaviside(u-Pi))+Heaviside(u-Pi))*cos(v+Pi*Heaviside(u-Pi)), -16*sin(u)-(4*(1-(1/2)*cos(u)))*sin(u)*cos(v)*(1-Heaviside(u-Pi))], u = 0 .. 2*Pi, v = 0 .. 2*Pi, 'scaling' = 'constrained', 'shading' = 'zhue');
+</pre>
+            <p>
+                <a href="/assets/resourcemanager/surfaces/klein_bottle/klein_bottle.mw"> Download Maple Code </a>
+            </p>
+
+            <br />
+
+            <p class="text-center">
+                <img class="text-cente" src="/assets/resourcemanager/surfaces/klein_bottle/klein_maple2.png">
+            </p>
+            <br />
+                <pre class="prettyprint linenums">with(plots):
+x := (2*sin(u)*cos(v/2)-sin(2*u)*sin(v/2)+8)*cos(v):
+y := (2*sin(u)*cos(v/2)-sin(2*u)*sin(v/2)+8)*sin(v):
+z := 4*sin(u)*sin(v/2)+sin(2*u)*cos(v/2):
+plot3d([x,y,z], u=0..2*Pi, v=0..2*Pi, grid=[20,40], title=`A Klein bottle`);
+
+# cleanup:
+x := x; y := y; z := z;</pre>
+            <p>
+                <a href="/assets/resourcemanager/surfaces/klein_bottle/klein_bottle2.mw"> Download Maple Code </a>
+            </p>
+            <!-- Maple-->
+
+            <!-- Sage -->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> Sage Sample Code </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+
+            <p class="text-center">
+                <img class="text-cente" src="/assets/resourcemanager/surfaces/klein_bottle/pic_klein_bottle_sage.png">
+            </p>
+            <br />
+                <pre class="prettyprint linenums">var('x,y,z')
+implicit_plot3d((x^2+y^2+z^2+2*y-1)*((x^2+y^2+z^2-2*y-1)^2-8*z^2)+16*x*z*(x^2+y^2+z^2-2*y-1), (x, -3, 3), (y, -3.1, 3.1), (z, -4, 4))</pre>
+            <p>
+                <a href="/assets/resourcemanager/surfaces/klein_bottle/klein_bottle_sage.py"> Download Sage Code </a>
+            </p>
+            <!-- Sage-->
+
+            <!-- To Developers-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead muted">
+                    <strong> To Developers </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <pre class="prettyprint linenums"> //Source code is not available</pre>
+            <!-- To Developers-->
+
+            <!-- Further Reading-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> Further Reading </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <ol>
+                <li> <a href="http://plus.maths.org/content/os/issue26/features/mathart/index" target="_blank"> Imaging maths - Inside the Klein bottle </a> </li>
+            </ol>
+            <!-- Further Reading-->
+
+            <!-- References-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> References </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <ol>
+                <li> <a href="http://en.wikipedia.org/wiki/Klein_bottle"> Wikipedia, Klein bottle </a> </li>
+                <li> <a href="http://paulbourke.net/geometry/klein/"> Paulbourke, Klein Bottle </a> </li>
+                <li> <a href="http://mathworld.wolfram.com/KleinBottle.html"> Mathworld.Wolfram, Klein Bottle </a> </li>
+                <li> <a href="http://www.mapleprimes.com/maplesoftblog/95570-Klein-Bottle-Plot"> Klein Bottle Plot</a> </li>
+                <li> <a href="http://www.math.umbc.edu/~rouben/dynagraph/examples.html"> University of Maryland Website, Mathematics Department </a> </li>
+            </ol>
+            <!-- References-->
+            <br />
+        </div>
+    </div>
+</div>

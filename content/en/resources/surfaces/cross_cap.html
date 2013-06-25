@@ -1,0 +1,131 @@
+---
+title: Cross-Cap
+
+requirementsScripts :
+- mathjax
+- prettify
+
+kind : article
+
+article_name : Cross-Cap
+article_parent : Surfaces
+article_parent_path : /en/resources/surfaces/
+article_description: In mathematics, a <strong>cross-cap</strong> is a two-dimensional surface in 3-space that is one-sided and the continuous image of a Möbius strip that intersects itself in an interval.
+article_logo_path : /surfaces/cross_cap/small.gif
+---
+
+<div class="row">
+    <div class="span10">
+        <div class="span5">
+            <p>
+                In mathematics, a <strong>cross-cap</strong> is a two-dimensional surface in 3-space that is one-sided and the continuous image of a Möbius strip that intersects itself in an interval. In the domain, the inverse image of this interval is a longer interval that the mapping into 3-space "folds in half". At the point where the longer interval is folded in half in the image, the nearby configuration is that of the Whitney umbrella.
+            </p><p></p><br />
+            <p></p>
+        </div>
+        <div class="span4">
+            <p class="text-center"> <img src="/assets/resourcemanager/surfaces/cross_cap/pic_cross_cap.png" class="img-rounded"> </p>
+            <p class="text-center"> <span class="label label-info" >Cross-Cap Surface</span> </p>
+            <p></p>
+        </div>
+        <div class="span9">
+
+            <!-- Equation-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead ">
+                    <strong> Equations </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <p>
+                The cross-cap can be generated using the general method for nonorientable surfaces using the polynomial function
+            </p>
+            <p>
+                \begin{align}
+                \ f(x,y,z) = \bigg( xz,yz, \frac{1}{2} \bigg( z^2 - x^2 \bigg)\bigg)   \\
+                \end{align}
+            </p>
+            <p>
+                Transforming to spherical coordinates gives
+            </p>
+            <p>
+                \begin{align}
+                \ x(u,v) = \frac{1}{2} \cos(u)\sin(2v) \\
+                \end{align}
+
+                \begin{align}
+                \ y(u,v) = \frac{1}{2} \sin(u)\sin(2v) \\
+                \end{align}
+
+                \begin{align}
+                \ z(u,v) = \frac{1}{2} \bigg( \cos^2(v) - \cos^2(u)\sin^2(v) \bigg)  \\
+                \end{align}
+            </p>
+            <p>
+                where $u \in [0,\ 2\pi]$ and $v \in [0,\ \pi/2]$. To make the equations slightly simpler, all three equations are normally multiplied by a factor of 2 to clear the arbitrary scaling constant. Three views of the cross-cap generated using this equation are shown above. Note that the middle one looks suspiciously like Bour's minimal surface.
+            </p><br/><br/>
+            <p>
+                Another representation is
+            </p>
+            <p>
+                \begin{align}
+                \ f(x,y,z) = \bigg( yz,2xy, x^2 - y^2 \bigg)   \\
+                \end{align}
+            </p>
+            <br/>
+            <!-- Equation-->
+
+            <!-- Sage -->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> Sage Sample Code </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+
+            <p class="text-center">
+                <img class="text-cente" src="/assets/resourcemanager/surfaces/cross_cap/cross_cap_sage.png">
+            </p>
+            <br/>
+                <pre class="prettyprint linenums">var('u,v')
+fx = (1+cos(v))*cos(u)
+fy = (1+cos(v))*sin(u)
+fz = -tanh((2/3)*(u-pi))*sin(v)
+parametric_plot3d([fx, fy, fz], (u, 0, 2*pi), (v, 0, 2*pi), frame=False, color="red")</pre>
+            <p>
+                <a href="/assets/resourcemanager/surfaces/cross_cap/cross_cap.py"> Download Sage Code </a>
+            </p>
+            <!-- Sage-->
+
+            <!-- To Developers-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead muted">
+                    <strong> To Developers </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <pre class="prettyprint linenums"> //Source code is not available</pre>
+            <!-- To Developers-->
+            <!-- Refrences-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> References </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <ol>
+                <li> <a href="http://en.wikipedia.org/wiki/Cross-cap"> Wikipedia, Cross-cap </a> </li>
+                <li> <a href="http://paulbourke.net/geometry/crosscap/"> Paulbourke, Cross-Cap </a> </li>
+                <li> <a href="http://mathworld.wolfram.com/Cross-Cap.html"> Mathworld.Wolfram, Cross-Cap </a> </li>
+                <li> <a href="http://xahlee.info/surface/cross-cap/cross-cap.html"> Xahlee.info, Cross-Cap Surface </a> </li>
+                <li> <a href="http://www.sagemath.org"> Sage Math </a> </li>
+            </ol>
+            <!-- Refrences-->
+            <br/>
+        </div>
+
+    </div>
+</div>

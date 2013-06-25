@@ -146,9 +146,26 @@
     <div class="container">
         <hr>
 
+
+        <% if get_kind == 'article' %>
+        <ul class="breadcrumb">
+            <li><a href="/en/">Home</a> <span class="divider">/</span></li>
+            <li><a href="<%= get_article_parent_path %>"><%= get_article_parent %></a> <span class="divider">/</span></li>
+            <li class="active"><%= get_article_name %></li>
+        </ul>
+
+        <p class="text-left article-title"><%= get_article_name %></p>
+
+        <% end %>
+
+
         <div id="main">
             <%= yield %>
         </div>
+
+        <% if get_kind == 'article' %>
+        <div id="push"></div>
+        <% end %>
 
     </div>
 
@@ -208,18 +225,19 @@
     });
 </script>
 <% end %>
-
 <% if requirementsScripts.include? 'listjs' %>
 <script src="/assets/js/list.min.js"></script>
 <script>
     var options = {
-        valueNames: ['feature', 'description']
+        valueNames: ['surfaces', 'description']
     };
 
-    var featureList = new List('example-list', options);
+    var featureList = new List('list-of-surfaces', options);
+
+
+    featureList.sort('surfaces', { asc: true });
 </script>
 <% end %>
-
 <% if requirementsScripts.include? 'prettify' %>
 <script src="/assets/js/prettify.js"></script>
 <script>

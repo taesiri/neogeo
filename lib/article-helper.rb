@@ -11,6 +11,30 @@ def get_kind
   end
 end
 
+def get_article_name
+  if @item[:article_name].nil?
+    '(none)'
+  else
+    @item[:article_name]
+  end
+end
+
+def get_article_parent
+  if @item[:article_parent].nil?
+    'Custom Pages'
+  else
+    @item[:article_parent]
+  end
+end
+
+def get_article_parent_path
+  if @item[:article_parent_path].nil?
+    'Custom Pages'
+  else
+    @item[:article_parent_path]
+  end
+end
+
 def kind_of(item)
   if item[:kind].nil?
     '(none)'

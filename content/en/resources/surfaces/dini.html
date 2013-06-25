@@ -1,0 +1,128 @@
+---
+title: Dini's Surface
+
+requirementsScripts :
+- mathjax
+- prettify
+
+kind : article
+
+article_name : Dini's Surface
+article_parent : Surfaces
+article_parent_path : /en/resources/surfaces/
+article_description:  In geometry, <strong>Dini's surface</strong> is a surface with constant negative curvature that can be created by twisting a pseudosphere. It is named after <a href="http://en.wikipedia.org/wiki/Ulisse_Dini"> Ulisse Dini</a>.
+article_logo_path : /surfaces/dini/small.gif
+---
+
+<div class="row">
+    <div class="span10">
+        <div class="span5">
+            <p>
+
+                In geometry, <strong>Dini's surface</strong> is a surface with constant negative curvature that can be created by twisting a pseudosphere. It is named after <a href="http://en.wikipedia.org/wiki/Ulisse_Dini"> Ulisse Dini</a>.
+
+            </p> <br/>
+        </div>
+        <div class="span4">
+            <p class="text-center"> <img src="/assets/resourcemanager/surfaces/dini/Dinis_Surface.svg.png" class="img-rounded"> </p>
+            <p class="text-center"> <span class="label label-info" >Dini's surface</span> </p>
+            <p></p>
+        </div>
+        <div class="span9">
+            <!-- Equation-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> Equations </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <p>Dini's surface described by the following parametric equations:</p>
+            <br/>
+            <p>
+                \begin{align}
+                \ x = a\cos(u)\sin(v) \\
+                \end{align}
+                \begin{align}
+                \ y = a\sin(u)\sin(v) \\
+                \end{align}
+                \begin{align}
+                \ z = a\big( \cos(v) + \ln(\tan(\frac{v}{2})) \big) + bu \\
+                \end{align}
+            </p>
+            <br/>
+            <!-- Equation-->
+            <!-- Maple-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> Maple Sample Code </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+
+            <p class="text-center">
+                <img class="text-center" src="/assets/resourcemanager/surfaces/dini/dini_surface_maple.png">
+            </p>
+            <br/>
+                            <pre class="prettyprint linenums">with(plots):
+x := cos(u)*sin(v); y := sin(u)*sin(v);
+z := cos(v)+log(tan((1/2)*v))+.2*u;
+plot3d([x, y, z], u = 0 .. 4*Pi, v = .1 .. (1/2)*Pi, grid = [50, 20], title = `Dini's surface`);
+x := x; y := y; z := z</pre>
+            <p>
+                <a href="/assets/resourcemanager/surfaces/dini/dini_surface.mw"> Download Maple Code </a>
+            </p>
+            <!-- Maple-->
+
+            <!-- Sage -->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> Sage Sample Code </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+
+            <p class="text-center">
+                <img class="text-center" src="/assets/resourcemanager/surfaces/dini/dini_sage.png">
+            </p>
+          <br/>
+                            <pre class="prettyprint linenums">u, v = var('u,v')
+fx = cos(u)*sin(v)
+fy = sin(u)*sin(v)
+fz = (cos(v)+log(tan(v/2))) + 0.2*u
+parametric_plot3d([fx, fy, fz], (u, 0, 12.4), (v, 0.1, 2),frame=False, color="red")</pre>
+            <p>
+                <a href="/assets/resourcemanager/surfaces/dini/dini.py""> Download Sage Code </a>
+            </p>
+            <!-- Sage-->
+
+            <!-- To Developers-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead muted">
+                    <strong> To Developers </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <pre class="prettyprint linenums"> //Source code is not available</pre>
+            <!-- To Developers-->
+            <!-- Refrences-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> References </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <ol>
+                <li> <a href="http://en.wikipedia.org/wiki/Dini%27s_surface"> Wikipedia, Dini's surface </a> </li>
+                <li> <a href="http://paulbourke.net/geometry/dini/"> Paulbourke, Dini's surface </a> </li>
+                <li> <a href="http://www.sagemath.org/doc/reference/plot3d/sage/plot/plot3d/parametric_plot3d.html"> Parametric Plots </a> </li>
+            </ol>
+            <!-- Refrences-->
+            <br/>
+        </div>
+    </div>
+</div>

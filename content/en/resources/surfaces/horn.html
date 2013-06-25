@@ -1,0 +1,88 @@
+---
+title: Horn
+
+requirementsScripts :
+- mathjax
+- prettify
+
+kind : article
+
+article_name : Horn
+article_parent : Surfaces
+article_parent_path : /en/resources/surfaces/
+article_description: Horn
+article_logo_path : /surfaces/horn/small.gif
+---
+<div class="row">
+    <div class="span10">
+        <div class="span9">
+
+            <!-- Maple-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> Maple Sample Code </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+
+            <p class="text-center">
+                <img class="text-cente" src="/assets/resourcemanager/surfaces/horn/pic_horn_maple.png">
+            </p>
+            <br />
+                <pre class="prettyprint linenums">with(plots):
+plot3d([(2+u*cos(v))*sin(2*Pi*u), (2+u*cos(v))*cos(2*Pi*u)+2*u, sin(v)*u], u = 0 .. 1, v = 0 .. 2*Pi, title = horn)</pre>
+            <p>
+                <a href="/assets/resourcemanager/surfaces/horn/horn_maple.mw"> Download Maple Code </a>
+            </p>
+            <!-- Maple-->
+
+            <!-- Sage -->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> Sage Sample Code </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+
+            <p class="text-center">
+                <img class="text-cente" src="/assets/resourcemanager/surfaces/horn/pic_horn_sage.png">
+            </p>
+            <br />
+                <pre class="prettyprint linenums">var('u,v')
+fx = (2+u*cos(v))*sin(2*pi*u)
+fy = (2+u*cos(v))*cos(2*pi*u) + (2*u)
+fz = u*sin(v)
+parametric_plot3d([fx, fy, fz], (u, 0, 1), (v, 0, 2*pi), frame=False, color="red")</pre>
+            <p>
+                <a href="/assets/resourcemanager/surfaces/horn/horn_sage.py"> Download Sage Code </a>
+            </p>
+            <!-- Sage-->
+
+            <!-- To Developers-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead muted">
+                    <strong> To Developers </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <pre class="prettyprint linenums"> //Source code is not available</pre>
+            <!-- To Developers-->
+            <!-- Refrences-->
+            <br/>
+            <blockquote class="article-headlines">
+                <p class="lead">
+                    <strong> References </strong>
+                </p>
+            </blockquote>
+            <hr class="line-separator">
+            <ol>
+                <li> <a href="http://paulbourke.net/geometry/horn/"> Paulbourke, Horn </a> </li>
+            </ol>
+            <!-- Refrences-->
+            <br />
+        </div>
+    </div>
+</div>
