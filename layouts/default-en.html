@@ -93,7 +93,7 @@
 
     <% if requirementsScripts.include? 'jxgraph' %>
     <script type="text/javascript" src="/assets/js/jsxgraphcore.js"></script>
-    <link rel="stylesheet" type="text/css" href="/assets/css/jsxgraph.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/js/css/jsxgraph.css" />
     <% end %>
 
 </head>
@@ -234,13 +234,13 @@
 <script src="/assets/js/list.min.js"></script>
 <script>
     var options = {
-        valueNames: ['surfaces', 'description']
+        valueNames: ['geometricShape', 'description']
     };
 
-    var featureList = new List('list-of-surfaces', options);
+    var featureList = new List('list-of-items', options);
 
 
-    featureList.sort('surfaces', { asc: true });
+    featureList.sort('geometricShape', { asc: true });
 </script>
 <% end %>
 <% if requirementsScripts.include? 'prettify' %>
