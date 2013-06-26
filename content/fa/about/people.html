@@ -1,5 +1,133 @@
 ---
-title: A New Item
+title: افراد
+requirementsStyles :
+    - persian-table
 ---
 
-Hi, I'm a new item!
+<p class="lead text-right">افراد</p>
+
+<div class="row">
+    <div class="span10">
+        <br/>
+
+        <!-- Faculties-->
+        <blockquote>
+            <p class="lead ">
+                <strong> هیات علمی</strong>
+            </p>
+        </blockquote>
+        <hr>
+
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th><i class="icon-user"></i> Name</th>
+                <th><i class="icon-book"></i> Title</th>
+                <th><i class="icon-home"></i> Personal Home Page</th>
+                <th><i class="icon-envelope"></i> Email Address</th>
+            </tr>
+            </thead>
+            <tbody>
+            <%get_faculties('en').each do |t|%>
+            <tr>
+                <td><%= t[0].strip.capitalize + ', ' + t[1].strip.capitalize %></td>
+                <td><%= t[2] %></td>
+                <% if t[3].strip == '' %>
+                <td>N/A</td>
+                <% else%>
+                <td> <a href="<%= t[3].strip %>"><%= t[3] %></a></td>
+                <% end %>
+                <td><a href="mailto:<%= t[4].strip %>"><%= t[4] %></a></td>
+            </tr>
+            <% end %>
+            </tbody>
+        </table>
+        <!-- Faculties-->
+        <br/>
+        <hr>
+        <br/>
+        <!-- Students-->
+
+        <blockquote>
+            <p class="lead ">
+                <strong> کارشناسی ارشد</strong>
+            </p>
+        </blockquote>
+        <hr>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th style="text-align: right;"><i class="icon-user"></i> نام و نام خانوادگی</th>
+                <th style="text-align: right;"><i class="icon-book"></i> گرایش تحصیلی</th>
+                <th style="text-align: right;"><i class="icon-book"></i> صفحه‌ی شخصی</th>
+                <th style="text-align: right;"><i class="icon-envelope"></i> ای‌میل</th>
+            </tr>
+            </thead>
+            <tbody>
+            <%get_students('ms','fa').each do |t|%>
+            <tr>
+                <td style="text-align: right;"><%= t[0].strip.capitalize + ', ' + t[1].strip.capitalize %></td>
+                <td style="text-align: right;">هندسه</td>
+                <td style="text-align: right;">N/A</td>
+                <% if t[2] != nil %>
+                <% if t[2].strip == '' %>
+                <td style="text-align: right;">N/A</td>
+                <% else%>
+                <td style="text-align: right;"> <a href="mailto:<%= t[2].strip %>"><%= t[2] %></a></td>
+                <% end %>
+                <% else%>
+                <td style="text-align: right;">N/A</td>
+                <% end %>
+            </tr>
+            <% end %>
+            </tbody>
+        </table>
+
+        <br/>
+        <hr>
+        <br/>
+
+        <blockquote>
+            <p class="lead ">
+                <strong> دکترا</strong>
+            </p>
+        </blockquote>
+        <hr>
+
+
+        <table class="table table-bordered" >
+            <thead>
+            <tr >
+                <th style="text-align: right;"><i class="icon-user"></i> نام و نام خانوادگی</th>
+                <th style="text-align: right;"><i class="icon-book"></i> گرایش تحصیلی</th>
+                <th style="text-align: right;"><i class="icon-book"></i> صفحه‌ی شخصی</th>
+                <th style="text-align: right;"><i class="icon-envelope"></i> ای‌میل</th>
+            </tr>
+            </thead>
+            <tbody>
+            <%get_students('phd','fa').each do |t|%>
+            <tr>
+                <td style="text-align: right;"><%= t[0].strip.capitalize + ', ' + t[1].strip.capitalize %></td>
+                <td style="text-align: right;">ریاضی محض</td>
+                <td style="text-align: right;">N/A</td>
+                <% if t[2] != nil %>
+                <% if t[2].strip == '' %>
+                <td style="text-align: right;">N/A</td>
+                <% else%>
+                <td style="text-align: right;"> <a href="mailto:<%= t[2].strip %>"><%= t[2] %></a></td>
+                <% end %>
+                <% else%>
+                <td style="text-align: right;">N/A</td>
+                <% end %>
+            </tr>
+            <% end %>
+            </tbody>
+        </table>
+
+
+
+        <!-- Students-->
+    </div>
+</div>
+
+<div id="push"></div>

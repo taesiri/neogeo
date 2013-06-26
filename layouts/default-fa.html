@@ -1,12 +1,12 @@
 <!DOCTYPE HTML>
-<html lang="<%= language_code_of(@item) %>">
+<html lang="<%= language_code_of(@item) %>" dir=rtl>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Geometry Group Website">
     <meta name="generator" content="nanoc <%= Nanoc::VERSION %>">
 
-    <title>گروه هندسه دانشگاه صنعتی امیرکبیر -  <%= @item[:title] %></title>
+    <title>گروه هندسه دانشگاه صنعتی امیرکبیر - <%= @item[:title] %></title>
 
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/bootstrap.css">
@@ -25,7 +25,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="/assets/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="/assets/ico/favicon.png">
-
+    <% if requirementsStyles.include? 'homepage' %>
     <style>
         a {
             display: inline-block;
@@ -63,7 +63,7 @@
             min-width: 720px;
         }
     </style>
-
+    <% end %>
 </head>
 <body>
 
@@ -78,7 +78,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="brand" href="/">Geometry Department</a>
+                    <a class="brand" href="/">گروه هندسه دانشگاه صنعتی امیرکبیر</a>
 
                     <div class="nav-collapse in collapse" style="height: auto;">
                         <ul class="nav pull-right">
@@ -89,21 +89,21 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">منابع آموزشی<b
                                         class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="/fa/questions/">سوالات</a></li>
-                                    <li><a href="/fa/books/">کتاب‌ها</a></li>
-                                    <li><a href="/fa/video/">ویدئوها</a></li>
+                                    <li><a href="/fa/resources/questions/">سوالات</a></li>
+                                    <li><a href="/fa/resources/books/">کتاب‌ها</a></li>
+                                    <li><a href="/fa/resources/video/">ویدئوها</a></li>
                                     <li class="divider"></li>
                                     <li class="nav-header">اشکال هندسی</li>
-                                    <li><a href="/fa/surfaces/surfaces/">رویه‌ها</a></li>
-                                    <li><a href="/fa/curves/curves/">منحنی‌ها</a></li>
+                                    <li><a href="/fa/resources/surfaces/">رویه‌ها</a></li>
+                                    <li><a href="/fa/resources/curves/">منحنی‌ها</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">درباره<b
                                         class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li class="active"><a href="/fa/people/">افراد</a></li>
-                                    <li><a href="/fa/contact/">ارتباط با ما</a></li>
+                                    <li class="active"><a href="/fa/about/people/">افراد</a></li>
+                                    <li><a href="/fa/about/contact/">ارتباط با ما</a></li>
                                     <li><a href="/fa/about/">درباره ما</a></li>
                                 </ul>
                             </li>
@@ -127,7 +127,7 @@
     </div>
 
 </div>
-<footer class="footer">
+<footer class="footer" dir=ltr>
     <div class="container">
 
         <div class="media">
