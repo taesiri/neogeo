@@ -16,7 +16,6 @@ title: People
         </blockquote>
         <hr>
 
-
         <table class="table table-bordered">
             <thead>
             <tr>
@@ -27,32 +26,18 @@ title: People
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>Bidabad, Behroz</td>
-                <td>Associate Prof.</td>
-                <td>N/A</td>
-                <td><a href="mailto:bidabad@aut.ac.ir">bidabad@aut.ac.ir</a></td>
-
-            </tr>
-            <tr>
-                <td>Boroojerdian, Nasser</td>
-                <td>Associate Prof.</td>
-                <td><a href="http://math-cs.aut.ac.ir/boroojerdian/" target="_blank"> math-cs.aut.ac.ir/boroojerdian</a>
-                </td>
-                <td><a href="mailto:broojerd@aut.ac.ir">broojerd@aut.ac.ir</a></td>
-            </tr>
-            <tr>
-                <td>Honari, Bijan</td>
-                <td>Associate Prof.</td>
-                <td>N/A</td>
-                <td><a href="mailto:honari@aut.ac.ir">honari@aut.ac.ir</a></td>
-            </tr>
-            <tr>
-                <td> Mir Mohammad Rezaii, Morteza</td>
-                <td>Associate Prof.</td>
-                <td>N/A</td>
-                <td><a href="mailto:mmreza@aut.ac.ir">mmreza@aut.ac.ir</a></td>
-            </tr>
+            <%get_faculties('en').each do |t|%>
+                <tr>
+                    <td><%= t[0].strip.capitalize + ', ' + t[1].strip.capitalize %></td>
+                    <td><%= t[2] %></td>
+                    <% if t[3].strip == '' %>
+                        <td>N/A</td>
+                    <% else%>
+                    <td> <a href="<%= t[3].strip %>"><%= t[3] %></a></td>
+                    <% end %>
+                    <td><a href="mailto:<%= t[4].strip %>"><%= t[4] %></a></td>
+                </tr>
+            <% end %>
             </tbody>
         </table>
         <!-- Faculties-->
@@ -65,7 +50,7 @@ title: People
 
         <blockquote>
             <p class="lead ">
-                <strong> Students</strong>
+                <strong> Students (Master's degree)</strong>
             </p>
         </blockquote>
         <hr>
@@ -76,27 +61,75 @@ title: People
             <tr>
                 <th><i class="icon-user"></i> Name</th>
                 <th><i class="icon-book"></i> Major</th>
-                <th><i class="icon-home"></i> Personal Home Page</th>
+                <th><i class="icon-book"></i> Personal Home Page</th>
                 <th><i class="icon-envelope"></i> Email Address</th>
             </tr>
             </thead>
             <tbody>
+            <%get_students('ms','en').each do |t|%>
             <tr>
-                <td>Taesiri, Mohammad Reza</td>
-                <td>Pure Math.</td>
-                <td><a href="http://taesiri.com" target="_blank">http://taesiri.com</a></td>
-                <td><a href="mailto:tae.s.r@hotmail.com">tae.s.r@hotmail.com</a></td>
-
-            </tr>
-            <tr>
-                <td>Ghanimat, Milad</td>
-                <td>Pure Math.</td>
+                <td><%= t[0].strip.capitalize + ', ' + t[1].strip.capitalize %></td>
+                <td>Geometry</td>
                 <td>N/A</td>
-                <td><a href="mailto:milad261@gmail.com">milad261@gmail.com</a></td>
-
+                <% if t[2] != nil %>
+                    <% if t[2].strip == '' %>
+                    <td>N/A</td>
+                    <% else%>
+                    <td> <a href="mailto:<%= t[2].strip %>"><%= t[2] %></a></td>
+                    <% end %>
+                <% else%>
+                    <td>N/A</td>
+                <% end %>
             </tr>
+            <% end %>
             </tbody>
         </table>
+
+        <br/>
+        <hr>
+        <br/>
+
+        <blockquote>
+            <p class="lead ">
+                <strong> Students (Ph.D. degree)</strong>
+            </p>
+        </blockquote>
+        <hr>
+
+
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th><i class="icon-user"></i> Name</th>
+                <th><i class="icon-book"></i> Major</th>
+                <th><i class="icon-book"></i> Personal Home Page</th>
+                <th><i class="icon-envelope"></i> Email Address</th>
+            </tr>
+            </thead>
+            <tbody>
+            <%get_students('phd','en').each do |t|%>
+            <tr>
+                <td><%= t[0].strip.capitalize + ', ' + t[1].strip.capitalize %></td>
+                <td>Mathematics</td>
+                <td>N/A</td>
+                <% if t[2] != nil %>
+                <% if t[2].strip == '' %>
+                <td>N/A</td>
+                <% else%>
+                <td> <a href="mailto:<%= t[2].strip %>"><%= t[2] %></a></td>
+                <% end %>
+                <% else%>
+                <td>N/A</td>
+                <% end %>
+            </tr>
+            <% end %>
+            </tbody>
+        </table>
+
+
+
         <!-- Students-->
     </div>
 </div>
+
+<div id="push"></div>
