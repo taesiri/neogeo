@@ -1,27 +1,27 @@
-اكبري, سميه
-احمدي, مهدي
-ايمان فر, مصطفي
-برازنده, محمد
-پورسعادت, ارش
-حبيبي نسب, وحيد
-حسن مجاور, جعفر
-حسن نژادنظير, سپهر
-حيدري, فهيمه
-رحيمي, رضا
-رضايي نايه, خديجه
-زندي, مهرنوش
-ستاري, جلال
-سليمي, سعيده
-صالحي, كيوان
-عباسي نهان, سعيد
-عزيزي دستگردي, رضا
-علي اكبري, مژده سادات
-كريميان ريزي, ندا
-كشوريان ازاد, علي
-متقي, سيده فاطمه
-مقدسي سنجاني, سيدمحمدباقر
-ممولر, پريسا
-منصوري, ميترا
-موسي خاني, محمد
-هاشمي, سيداحسان
-همتي, مصطفي
+احمدي,  مهدي, mahdyahmady@aut.ac.ir
+اكبري,  سميه, somaye_akbari@aut.ac.ir
+ايمان فر,  مصطفي, m.imanfar@aut.ac.ir
+برازنده,  محمد, m.barazandeh@aut.ac.ir
+پورسعادت,  ارش, arash_kimia184@yahoo.com
+حبيبي نسب,  وحيد, v.habibi@aut.ac.ir
+حسن مجاور,  جعفر, sirvan@aut.ac.ir
+حسن نژادنظير,  سپهر, shaya@aut.ac.ir
+حيدري,  فهيمه, fheidari@aut.ac.ir
+رحيمي,  رضا, reza.rahimi@aut.ac.ir
+رضايي نايه,  خديجه, k.rezaie@aut.ac.ir
+زندي,  مهرنوش, mehrnoosh_zandi@aut.ac.ir
+ستاري,  جلال, sattari22@aut.ac.ir
+سليمي,  سعيده, ssalimi@aut.ac.ir
+صالحي,  كيوان, keyvansalehi@aut.ac.ir
+عباسي نهان,  سعيد, abbasi91@aut.ac.ir
+عزيزي دستگردي,  رضا, mrezab@aut.ac.ir
+علي اكبري,  مژده سادات, mozhde_aliakbari@aut.ac.ir
+كريميان ريزي,  ندا, karimian91@aut.ac.ir
+كشوريان ازاد,  علي, keshvariyan@aut.ac.ir
+متقي,  سيده فاطمه, 
+مقدسي سنجاني,  سيدمحمدباقر, bagher90@aut.ac.ir
+ممولر,  پريسا, p.mamouler@aut.ac.ir
+منصوري,  ميترا, mitramansoori@aut.ac.ir
+موسي خاني,  محمد, mosakhani@aut.ac.ir
+هاشمي,  سيداحسان, s.e.hashemi@aut.ac.ir
+همتي,  مصطفي, mstfhemati@aut.ac.ir

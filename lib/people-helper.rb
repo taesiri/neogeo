@@ -33,10 +33,16 @@ def get_faculties(lang)
   teachers = []
   if (lang == 'en')
     fname = "data/faculties-en.txt"
-    File.open(fname, 'r').each_line do |line|
-      line = line.strip.split ','
-      teachers  << line
+
+  else
+    if (lang == 'fa')
+      fname = "data/faculties-fa.txt"
     end
+  end
+
+  File.open(fname, 'r').each_line do |line|
+    line = line.strip.split ','
+    teachers  << line
   end
   teachers.sort
 end

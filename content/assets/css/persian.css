@@ -1,3 +1,67 @@
+p{
+    font-family: BBaran;
+}
+
+h1{
+    font-family: BBaran;
+    font-size: 32px;
+}
+h2{
+    font-family: BBaran;
+    font-size: 28px;
+}
+h3{
+    font-family: BBaran;
+    font-size: 23px;
+}
+h4{
+    font-family: BBaran;
+    font-size: 20px;
+}
+
+.brand {
+    font-family: BBaran;
+}
+
+.nav li{
+    font-size: 19px;
+    font-family: BBaran;
+}
+
+.lead {
+    font-size: 25px;
+}
+
+
+.persian-table{
+    font-family: BCompset;
+
+}
+
+.persian-table th{
+   font-size: 17px;
+   text-align: right;
+}
+
+.persian-table td{
+   font-size: 17px;
+   text-align: right;
+}
+
+blockquote {
+    border-left: 0px;
+    border-right: 5px solid #EEEEEE;
+    margin: 0 0 20px;
+    padding-right: 15px;
+}
+
+.weblink{
+    direction: ltr;
+    text-align: left;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
 .news-header {
     font-family: BBaran;
     font-size: 24px;
@@ -27,3 +91,4 @@
 .btn-persian {
     font-family: BLotus;
 }
+

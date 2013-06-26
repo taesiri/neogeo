@@ -1,0 +1,4 @@
+بیدآباد,  بهروز, استادیار, , bidabad@aut.ac.ir
+بروجردیان,  ناصر, استادیار, http://math-cs.aut.ac.ir/boroojerdian/, broojerd@aut.ac.ir
+هنری,  بیژن, استادیار, , honari@aut.ac.ir
+میرمحمدرضایی,  مرتضی, استادیار, , mmreza@aut.ac.ir

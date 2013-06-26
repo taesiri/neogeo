@@ -1,5 +1,37 @@
 ---
-title: A New Item
+title: رویه‌ها
+requirementsScripts :
+    - listjs
 ---
 
-Hi, I'm a new item!
+<h2 class="text-right">رویه‌ها</h2>
+<br/>
+<div class="container-fluid" dir=ltr>
+
+    <div id="list-of-items">
+        <p>
+            <input class="search" type="text" placeholder="Search…"/>
+            <a class="btn btn-success sort pull-right" data-sort="geometricShape" data href="#"
+               style="margin-bottom: 10px;">Sort</a>
+        </p>
+        <ul class="list">
+            <% get_all_articles_of('Surfaces').each do |t| %>
+
+            <li class="sortableList">
+                <div class="media geometricShape">
+                    <a class="pull-left" href="<%= t.path %>">
+                        <img class="media-object"  alt="64x64" style="height: 64px; width: 64px;" src="/assets/resourcemanager<%= get_article_logo_of(t) %>">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading"><a href="<%= t.path %>"><%= get_article_name_of(t) %></a></h4>
+                    </div>
+                    <%= get_article_description_of(t) %>
+                </div>
+            </li>
+            <% end %>
+        </ul>
+
+    </div>
+</div>
+
+<div id="push"></div>
