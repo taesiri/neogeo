@@ -13,9 +13,10 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
-compile '/assets/*' do
-  # don’t filter or layout
-end
+
+#####################
+###  Homepage - Start Screen
+#####################
 
 compile '/' do
   if item.binary?
@@ -26,6 +27,9 @@ compile '/' do
   end
 end
 
+#####################
+###  Localization - /en/
+#####################
 
 compile '/en/*' do
   if item.binary?
@@ -36,6 +40,10 @@ compile '/en/*' do
   end
 end
 
+#####################
+###   Localization - /fa/
+#####################
+
 compile '/fa/*' do
   if item.binary?
     # don’t filter binary items
@@ -45,6 +53,31 @@ compile '/fa/*' do
   end
 end
 
+#####################
+###  Assets/Fonts
+#####################
+
+route '/assets/fonts/*' do
+  # /fonts/foo-eot/ -> /fonts/foo.eot
+  item.identifier.sub(/-.+\/$/, '') + '.' + item[:extension]
+end
+
+#####################
+###  Assets/
+#####################
+
+compile '/assets/*' do
+  # don’t filter or layout
+end
+
+route '/assets/*' do
+  item.identifier.chop + '.' + item[:extension]
+end
+
+#####################
+###  default
+#####################
+
 compile '*' do
   if item.binary?
     # don’t filter binary items
@@ -52,16 +85,6 @@ compile '*' do
     filter :erb
     layout 'default'
   end
-end
-
-
-route '/assets/fonts/*' do
-  # /fonts/foo-eot/ -> /fonts/foo.eot
-  item.identifier.sub(/-.+\/$/, '') + '.' + item[:extension]
-end
-
-route '/assets/*' do
-  item.identifier.chop + '.' + item[:extension]
 end
 
 route '*' do
