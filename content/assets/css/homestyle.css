@@ -1,0 +1,46 @@
+body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#wrap {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -175px;
+    margin-left: -475px;
+    width: 900px;
+    height: 300px;
+    padding: 50px;
+}
+
+#wrap h1 {
+    font-size: 22px;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+#wrap p {
+    font-size: 20px;
+    line-height: 30px;
+    color: #000;
+}
+
+#select-lang {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+#aut_logo {
+    width: 128px;
+    height: 128px;
+}
+
+.farsi-btn {
+    font-family: BBaran;
+    font-size: 28px;
+}

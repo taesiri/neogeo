@@ -6,7 +6,7 @@ requirementsScripts :
 
 <h2 class="text-right">منحنی‌ها</h2>
 <br/>
-<div class="container-fluid">
+<div class="container-fluid" dir=ltr>
 
     <div id="list-of-items">
         <p>
@@ -20,10 +20,10 @@ requirementsScripts :
             <li class="sortableList">
                 <div class="media geometricShape">
                     <a class="pull-left" href="<%= t.path %>">
-                        <img class="media-object"  alt="64x64" style="height: 64px; width: 64px;" src="/assets/resourcemanager<%= get_article_logo_of(t) %>">
+                        <img class="media-object"  style="height: 64px; width: 64px;" src="/assets/resourcemanager<%= get_article_logo_of(t) %>">
                     </a>
                     <div class="media-body">
-                        <h4 class="media-heading"><a href="<%= t.path %>"><%= get_article_name_of(t) %></a></h4>
+                        <h5 class="media-heading"><a href="<%= t.path %>"><%= get_article_name_of(t) %></a></h5>
                     </div>
                     <%= get_article_description_of(t) %>
                 </div>
