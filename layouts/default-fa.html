@@ -85,11 +85,8 @@
     <link rel="stylesheet" type="text/css" href="/assets/js/css/jsxgraph.css" />
     <% end %>
 
-
 </head>
 <body>
-
-
 <div id="wrap">
     <div class="navbar-wrapper pull-right" dir=rtl>
         <div class="container">
@@ -100,19 +97,17 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="brand" href="/fa/">گروه هندسه دانشگاه صنعتی امیرکبیر</a>
                     <div class="nav-collapse in collapse" style="height: auto;">
                         <ul class="nav pull-right">
                             <li><a href="/fa/">خانه</a></li>
                             <li><a href="/fa/events/">روی‌دادها</a></li>
                             <li><a href="/fa/publications/">مقالات</a></li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">منابع آموزشی<b
-                                        class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">منابع آموزشی <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="/fa/resources/questions/">سوالات</a></li>
                                     <li><a href="/fa/resources/books/">کتاب‌ها</a></li>
-                                    <li><a href="/fa/resources/video/">ویدئوها</a></li>
+                                    <li><a href="/fa/resources/video/">فیلم‌های آموزشی</a></li>
                                     <li class="divider"></li>
                                     <li class="nav-header">اشکال هندسی</li>
                                     <li><a href="/fa/resources/surfaces/">رویه‌ها</a></li>
@@ -120,8 +115,7 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">درباره<b
-                                        class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">درباره <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="/fa/about/people/">افراد</a></li>
                                     <li><a href="/fa/about/contact/">ارتباط با ما</a></li>
@@ -130,6 +124,13 @@
                             </li>
                         </ul>
                     </div>
+                    <% if get_translation_path != '(none)' %>
+                    <div class="nav-collapse collapse pull-left" style="height: auto;">
+                        <ul class="nav pull-left">
+                            <li><a id="language_switch_to_en" href="<%= get_translation_path %>">English</a></li>
+                        </ul>
+                    </div>
+                    <% end %>
                     <!--/.nav-collapse -->
                 </div>
                 <!-- /.navbar-inner -->
@@ -159,30 +160,27 @@
     </div>
 
 </div>
-<footer class="footer" dir=ltr>
+<footer class="footer" dir=rtl>
     <div class="container">
-
         <div class="media">
-            <a class="pull-left" href="#">
+            <a class="pull-right" href="#">
                 <img class="media-object" src="/assets/img/aut_s_2.png" data-src="holder.js/64x64">
             </a>
 
-            <div class="media-body">
-                <ul class="footer-links">
-                    <li><a href="http://aut.ac.ir">Amirkabir University (Tehran Polytechnic)</a></li>
+            <div class="media-body pull-right">
+                <ul class="footer-links pull-right">
+                    <li><a class="persian-weblink" href="http://aut.ac.ir">دانشگاه صنعتی امیرکبیر</a></li>
                     <li class="muted">·</li>
-                    <li><a href="http://math-cs.aut.ac.ir">Mathematics Department</a></li>
+                    <li><a class="persian-weblink" href="http://math-cs.aut.ac.ir">دانشکده ریاضی</a></li>
                     <li class="muted">·</li>
-                    <li><a href="https://github.com/taesiri/geometry" target="_blank">Github</a></li>
+                    <li><a class="persian-weblink " href="https://github.com/taesiri/neogeo" target="_blank">گیت‌هاب</a></li>
                     <li class="muted">·</li>
-                    <li><a href="#">Changelog</a></li>
+                    <li><a class="persian-weblink" href="#">تغییرات</a></li>
                 </ul>
-                <p class="muted text-left" style="font-size: 90%;">Made with <a
-                        href="http://twitter.github.io/bootstrap/index.html"> Bootstrap </a> by <a
-                        href="http://taesiri.com">Mohammad Reza Taesiri </a>. Code licensed under <a
-                        href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>,
-                    documentations under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
-                <br/>
+                <p class="muted text-left" style="font-size: 145%; text-align: right;">
+                    ساخته شده به وسیله <a  class="weblink" href="http://Nanoc.ws"> Nanoc </a> و <a class="weblink "
+                        href="http://twitter.github.io/bootstrap/index.html"> Bootstrap </a> توسط محمّدرضا تأثیری.
+                </p>
             </div>
         </div>
 

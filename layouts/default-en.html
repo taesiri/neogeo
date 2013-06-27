@@ -97,9 +97,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="brand" href="/en/">Geometry Department</a>
-
-                    <div class="nav-collapse in collapse" style="height: auto;">
+                    <div class="nav-collapse collapse " style="height: auto;">
                         <ul class="nav">
                             <li><a href="/en/">Home</a></li>
                             <li><a href="/en/events/">Events</a></li>
@@ -128,6 +126,13 @@
                             </li>
                         </ul>
                     </div>
+                    <% if get_translation_path != '(none)' %>
+                    <div class="nav-collapse collapse pull-right " style="height: auto;">
+                        <ul class="nav pull-right">
+                            <li><a id="language_switch_to_fa" href="<%= get_translation_path %>">فارسی</a></li>
+                        </ul>
+                    </div>
+                    <% end %>
                     <!--/.nav-collapse -->
                 </div>
                 <!-- /.navbar-inner -->
@@ -169,12 +174,13 @@
                     <li class="muted">·</li>
                     <li><a href="http://math-cs.aut.ac.ir">Mathematics Department</a></li>
                     <li class="muted">·</li>
-                    <li><a href="https://github.com/taesiri/geometry" target="_blank">Github</a></li>
+                    <li><a href="https://github.com/taesiri/neogeo" target="_blank">Github</a></li>
                     <li class="muted">·</li>
                     <li><a href="#">Changelog</a></li>
                 </ul>
                 <p class="muted text-left" style="font-size: 90%;">Made with <a
-                        href="http://twitter.github.io/bootstrap/index.html"> Bootstrap </a> by <a
+                        href="http://twitter.github.io/bootstrap/index.html"> Bootstrap </a> and
+                        <a  class="weblink" href="http://Nanoc.ws"> Nanoc </a> by <a
                         href="http://taesiri.com">Mohammad Reza Taesiri </a>. Code licensed under <a
                         href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>,
                     documentations under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>

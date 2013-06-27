@@ -68,6 +68,11 @@ blockquote {
     font-size: 14px;
 }
 
+.persian-weblink{
+    font-family: BBaran;
+    font-size: 20px;
+}
+
 .news-header {
     font-family: BBaran;
     font-size: 24px;
