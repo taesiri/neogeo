@@ -1,5 +1,36 @@
 ---
 title: روی‌دادها
+requirementsStyles :
+    - persian-table
 ---
-
-<h2 class="text-right">روی‌دادها</h2>
+<div class="row-fluid">
+    <!--Latest Course News-->
+    <blockquote class="article-headlines">
+        <p class="lead ">
+            <strong> روی‌دادها</strong>
+        </p>
+    </blockquote>
+    <hr class="line-separator">
+    <table class="table table-bordered persian-table">
+        <thead>
+        <tr>
+            <th><i class="icon-user"></i> روی‌داد</th>
+            <th><i class="icon-book"></i> تاریخ</th>
+            <th><i class="icon-home"></i> نام درس</th>
+            <th><i class="icon-home"></i> کد درس</th>
+        </tr>
+        </thead>
+        <tbody>
+        <%get_evetns('fa').each do |t|%>
+        <tr>
+            <td><%= t[0] %></td>
+            <td><%= t[1] %></td>
+            <td><%= t[2] %></td>
+            <td><%= t[3] %></td>
+        </tr>
+        <% end %>
+        </tbody>
+    </table>
+    <!--Latest Course News-->
+</div>
+<div id="push"></div>

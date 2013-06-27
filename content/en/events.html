@@ -1,47 +1,34 @@
 ---
 title: Events
 ---
-
 <div class="row-fluid">
-    <!--Latest News-->
-    <p class="lead ">
-        Course Events
-    </p>
-    <table class="table">
+    <!--Latest Course News-->
+    <blockquote class="article-headlines">
+        <p class="lead ">
+            <strong> Course Events </strong>
+        </p>
+    </blockquote>
+    <hr class="line-separator">
+    <table class="table table-bordered">
         <thead>
         <tr>
-            <th>#</th>
-            <th>Event</th>
-            <th>Date</th>
-            <th>Note</th>
+            <th><i class="icon-user"></i> Event</th>
+            <th><i class="icon-book"></i> Date</th>
+            <th><i class="icon-home"></i> Course Title</th>
+            <th><i class="icon-home"></i> Couse Id</th>
         </tr>
         </thead>
         <tbody>
-        <tr class="error">
-            <td>1</td>
-            <td>Midterm exam</td>
-            <td>04/22/2013</td>
-            <td>Differential Geometry, Course Id : 1126044</td>
+        <%get_evetns('en').each do |t|%>
+        <tr>
+            <td><%= t[0] %></td>
+            <td><%= t[1] %></td>
+            <td><%= t[2] %></td>
+            <td><%= t[3] %></td>
         </tr>
-        <tr class="error">
-            <td>2</td>
-            <td>Midterm exam</td>
-            <td>05/5/2013</td>
-            <td>Algebraic Geometry, Course Id : 1129134</td>
-        </tr>
-        <tr class="error">
-            <td>3</td>
-            <td>Final exam</td>
-            <td>06/2/2013</td>
-            <td>Differential Geometry, Course Id : 1126044</td>
-        </tr>
-        <tr class="error">
-            <td>4</td>
-            <td>Final exam</td>
-            <td>06/10/2013</td>
-            <td>Algebraic Geometry, Course Id : 1129134</td>
-        </tr>
+        <% end %>
         </tbody>
     </table>
-    <!--Latest News-->
+    <!--Latest Course News-->
 </div>
+<div id="push"></div>

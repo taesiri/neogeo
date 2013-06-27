@@ -19,6 +19,12 @@ h4{
     font-size: 20px;
 }
 
+address{
+    font-family: BCompset;
+    font-size: 18px;
+
+}
+
 .brand {
     font-family: BBaran;
 }
@@ -87,8 +93,14 @@ blockquote {
     font-weight: bold;
     direction: rtl;
 }
-
-.btn-persian {
-    font-family: BLotus;
+.persian-lable{
+    font-family: BBaran;
+    font-size: 14px;;
 }
+
+.persian-btn {
+    font-family: BBaran;
+    font-size: 17px;
+}
+
 
