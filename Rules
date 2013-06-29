@@ -15,19 +15,6 @@
 
 
 #####################
-###  Homepage - Start Screen
-#####################
-
-compile '/' do
-  if item.binary?
-    # don’t filter binary items
-  else
-    filter :erb
-    layout 'homepage'
-  end
-end
-
-#####################
 ###  Localization - /en/
 #####################
 
@@ -75,8 +62,35 @@ route '/assets/*' do
 end
 
 #####################
+###  Sitemap.xml
+#####################
+
+compile 'sitemap' do
+  filter :erb
+end
+
+route 'sitemap' do
+  item.identifier.chop + '.xml'
+end
+
+
+#####################
+###  Homepage - Start Screen
+#####################
+
+compile '/' do
+  if item.binary?
+    # don’t filter binary items
+  else
+    filter :erb
+    layout 'homepage'
+  end
+end
+
+#####################
 ###  default
 #####################
+
 
 compile '*' do
   if item.binary?
