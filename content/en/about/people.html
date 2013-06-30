@@ -113,11 +113,11 @@ translate_path : /fa/about/people/
                 <td><%= t[0].strip.capitalize + ', ' + t[1].strip.capitalize %></td>
                 <td>Mathematics</td>
                 <td>N/A</td>
-                <% if t[2] != nil %>
-                <% if t[2].strip == '' %>
+                <% if t[3] != nil %>
+                <% if t[3].strip == '' %>
                 <td>N/A</td>
                 <% else%>
-                <td> <a href="mailto:<%= t[2].strip %>"><%= t[2] %></a></td>
+                <td> <a href="mailto:<%= t[3].strip %>"><%= t[3] %></a></td>
                 <% end %>
                 <% else%>
                 <td>N/A</td>
@@ -126,9 +126,6 @@ translate_path : /fa/about/people/
             <% end %>
             </tbody>
         </table>
-
-
-
         <!-- Students-->
     </div>
 </div>

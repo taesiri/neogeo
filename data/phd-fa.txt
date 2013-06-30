@@ -1,29 +1,29 @@
-انصاري,  هاجر, ha2578@aut.ac.ir
-آل هوز,  عبدالله, a.alhevaz@aut.ac.ir
-باقري فرد,  ندا, n.bagherifard@aut.ac.ir
-بهمني,  اصغر, asghar.bahmani@aut.ac.ir
-پيربداقي,  زهرا, 
-پيرهادي,  وحيد, v.pirhadi@aut.ac.ir
-تاتاري,  محبوبه, mtatari@aut.ac.ir
-حسامي فرد,  فاخته, fhesamifard@aut.ac.ir
-خادم صداقت,  مارال, m_sedaghat@aut.ac.ir
-خدابخشي جويناني,  ندا, khodabakhshi@aut.ac.ir
-خدايي مهر,  حسن, h.khodaiemehr@aut.ac.ir
-دامادي,  حميد, 
-ذوقي فرد,  ريحانه, r.zoghifard@aut.ac.ir
-رضي,  نرجس, razina@aut.ac.ir
-سعيدي,  مهديس, mahdis.saeedi@aut.ac.ir
-سلطان محمدي,  احمد , a.soltanmohamadi@aut.ac.ir
-سيدي سياهكله,  سيده معصومه, mseyyedi@aut.ac.ir
-شاهي,  عليرضا, alirezashahi@aut.ac.ir
-شجاعي,  ندا, shojaee_neda@aut.ac.ir
-شيرين كلام,  احمد, shirinkalam_a@aut.ac.ir
-صادق دقيقي,  علي, 
-صلاحي فرد,  هيرو, salahi@aut.ac.ir
-فصيحي رامندي,  قدرت اله, gh_fasihi@aut.ac.ir
-فيض ابادي,  حسن, hassan_feiz1970@aut.ac.ir
-کاظمي تربقان,  سيد مهدي, 
-محدث,  حسين, hoseinmohades@aut.ac.ir
-واعظ زاده,  سارا, sarah_vaezzadeh@aut.ac.ir
-ولي زاده,  علي, valizadeh.ali@aut.ac.ir
-ياراحمدي,  محمد, m.yarahmadi@aut.ac.ir
+انصاري,  هاجر, ریاضی, ha2578@aut.ac.ir
+آل هوز,  عبدالله, ریاضی, a.alhevaz@aut.ac.ir
+باقري فرد,  ندا, ریاضی, n.bagherifard@aut.ac.ir
+بهمني,  اصغر, ریاضی, asghar.bahmani@aut.ac.ir
+پيربداقي,  زهرا, ریاضی, 
+پيرهادي,  وحيد, ریاضی, v.pirhadi@aut.ac.ir
+تاتاري,  محبوبه, ریاضی, mtatari@aut.ac.ir
+حسامي فرد,  فاخته, ریاضی, fhesamifard@aut.ac.ir
+خادم صداقت,  مارال, ریاضی, m_sedaghat@aut.ac.ir
+خدابخشي جويناني,  ندا, ریاضی, khodabakhshi@aut.ac.ir
+خدايي مهر,  حسن, ریاضی, h.khodaiemehr@aut.ac.ir
+دامادي,  حميد, ریاضی, hamid.damadi@gmail.com
+ذوقي فرد,  ريحانه, ریاضی, r.zoghifard@aut.ac.ir
+رضي,  نرجس, ریاضی, razina@aut.ac.ir
+سعيدي,  مهديس, ریاضی, mahdis.saeedi@aut.ac.ir
+سلطان محمدي,  احمد , ریاضی, a.soltanmohamadi@aut.ac.ir
+سيدي سياهكله,  سيده معصومه, ریاضی, mseyyedi@aut.ac.ir
+شاهي,  عليرضا, ریاضی, alirezashahi@aut.ac.ir
+شجاعي,  ندا, ریاضی, shojaee_neda@aut.ac.ir
+شيرين كلام,  احمد, ریاضی, shirinkalam_a@aut.ac.ir
+صادق دقيقي,  علي, ریاضی, a.s.daghighi@gmail.com
+صلاحي فرد,  هيرو, ریاضی, salahi@aut.ac.ir
+فصيحي رامندي,  قدرت اله, ریاضی, gh_fasihi@aut.ac.ir
+فيض ابادي,  حسن, ریاضی, hassan_feiz1970@aut.ac.ir
+کاظمي تربقان,  سيد مهدي, ریاضی, mehdikazemi_2012@yahoo.com
+محدث,  حسين, ریاضی, hoseinmohades@aut.ac.ir
+واعظ زاده,  سارا, ریاضی, sarah_vaezzadeh@aut.ac.ir
+ولي زاده,  علي, ریاضی, valizadeh.ali@aut.ac.ir
+ياراحمدي,  محمد, ریاضی, m.yarahmadi@aut.ac.ir

@@ -103,13 +103,13 @@ translate_path : /en/about/people/
             <%get_students('phd','fa').each do |t|%>
             <tr>
                 <td><%= t[0].strip.capitalize + '، ' + t[1].strip.capitalize %></td>
-                <td>ریاضی محض</td>
+                <td><%= t[2] %></td>
                 <td>موجود نیست</td>
-                <% if t[2] != nil %>
-                <% if t[2].strip == '' %>
+                <% if t[3] != nil %>
+                <% if t[3].strip == '' %>
                 <td>موجود نیست</td>
                 <% else%>
-                <td> <div class="weblink"><a href="mailto:<%= t[2].strip %>"><%= t[2] %></a></div></td>
+                <td> <div class="weblink"><a href="mailto:<%= t[3].strip %>"><%= t[3] %></a></div></td>
                 <% end %>
                 <% else%>
                 <td>موجود نیست</td>
