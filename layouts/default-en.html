@@ -85,6 +85,14 @@
     <script type="text/javascript" src="/assets/js/jsxgraphcore.js"></script>
     <link rel="stylesheet" type="text/css" href="/assets/js/css/jsxgraph.css" />
     <% end %>
+
+    <% if requirementsStyles.include? 'mbuttons'%>
+    <link rel="stylesheet" href="/assets/css/m-buttons.min.css">
+    <link rel="stylesheet" href="/assets/css/m-forms-min.css">
+    <link rel="stylesheet" href="/assets/css/m-icons-min.css">
+    <link rel="stylesheet" href="/assets/css/m-normalize-min.css">
+    <link rel="stylesheet" href="/assets/css/m-styles-min.css">
+    <% end %>
 </head>
 <body>
 <div id="wrap">
